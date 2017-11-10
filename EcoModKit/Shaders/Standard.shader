@@ -144,14 +144,14 @@ Shader "Curved/Standard"
 			#include "CurvedHelper.cginc"
 
 #if UNITY_STANDARD_SIMPLE
-			VertexOutputBaseSimple vert(VertexInput v)
+			VertexOutputForwardAddSimple vert(VertexInput v)
 #else
-			VertexOutputForwardBase vert(VertexInput v)
+			VertexOutputForwardAdd vert(VertexInput v)
 #endif
             {
 				UNITY_SETUP_INSTANCE_ID(v);
                 v.vertex = curveVertex(v.vertex, unity_ObjectToWorld, unity_WorldToObject);
-                return vertBase(v);
+                return vertAdd(v);
             }
             ENDCG
         }
@@ -184,18 +184,18 @@ Shader "Curved/Standard"
             #include "CurvedHelper.cginc"
 
 #ifdef UNITY_STANDARD_USE_SHADOW_OUTPUT_STRUCT
-            void vert(VertexInput v, out VertexOutputShadowCaster o, out float4 opos : SV_POSITION)
+            void vert(VertexInput v, out float4 opos : SV_POSITION, out VertexOutputShadowCaster o)
             {
 				UNITY_SETUP_INSTANCE_ID(v);
                 v.vertex = curveVertex(v.vertex, unity_ObjectToWorld, unity_WorldToObject);
-                vertShadowCaster(v, o, opos);
+                vertShadowCaster(v, opos, o);
             }
 #elif UNITY_STANDARD_USE_STEREO_SHADOW_OUTPUT_STRUCT
-            void vert(VertexInput v, out VertexOutputStereoShadowCaster os, out float4 opos : SV_POSITION)
+            void vert(VertexInput v, out float4 opos : SV_POSITION, out VertexOutputStereoShadowCaster os)
             {
 				UNITY_SETUP_INSTANCE_ID(v);
                 v.vertex = curveVertex(v.vertex, unity_ObjectToWorld, unity_WorldToObject);
-                vertShadowCaster(v, os, opos);
+                vertShadowCaster(v, opos, os);
             }
 #else
             void vert(VertexInput v, out float4 opos : SV_POSITION)
@@ -403,18 +403,18 @@ Shader "Curved/Standard"
 			#include "CurvedHelper.cginc"
 
 #ifdef UNITY_STANDARD_USE_SHADOW_OUTPUT_STRUCT
-            void vert(VertexInput v, out VertexOutputShadowCaster o, out float4 opos : SV_POSITION)
+            void vert(VertexInput v, out float4 opos : SV_POSITION, out VertexOutputShadowCaster o)
             {
 				UNITY_SETUP_INSTANCE_ID(v);
                 v.vertex = curveVertex(v.vertex, unity_ObjectToWorld, unity_WorldToObject);
-                vertShadowCaster(v, o, opos);
+                vertShadowCaster(v, opos, o);
             }
 #elif UNITY_STANDARD_USE_STEREO_SHADOW_OUTPUT_STRUCT
-            void vert(VertexInput v, out VertexOutputStereoShadowCaster os, out float4 opos : SV_POSITION)
+            void vert(VertexInput v, out float4 opos : SV_POSITION, out VertexOutputStereoShadowCaster os)
             {
 				UNITY_SETUP_INSTANCE_ID(v);
                 v.vertex = curveVertex(v.vertex, unity_ObjectToWorld, unity_WorldToObject);
-                vertShadowCaster(v, os, opos);
+                vertShadowCaster(v, opos, os);
             }
 #else
             void vert(VertexInput v, out float4 opos : SV_POSITION)
