@@ -1,1 +1,2 @@
 *.unitypackage filter=lfs diff=lfs merge=lfs -text eol=crlf
+*.zip filter=lfs diff=lfs merge=lfs -text eol=crlf
