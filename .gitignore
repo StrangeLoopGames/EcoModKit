@@ -1,3 +1,9 @@
 Examples/Flag/Client/Library/
 Examples/Flag/Client/Temp/
 Examples/Flag/Client/AssetBundles/
+**/.vs
+/Examples/Blockset/Client/AssetBundles
+/Examples/Blockset/Client/Library
+/Examples/Blockset/Client/obj
+/Examples/Blockset/Client/Temp
+/Examples/Blockset/Client/Packages/com.strangeloopgames.eco-shared

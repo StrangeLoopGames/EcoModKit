@@ -164,7 +164,7 @@ public class BlockSetEditor : Editor
             }
             else
             {
-                preview.image = Texture.white;
+                preview.image = Texture2D.blackTexture;
             }
         }
         else if (block.Builder is WeightedPrefabBlockBuilder weightedPrefabBlockBuilder)

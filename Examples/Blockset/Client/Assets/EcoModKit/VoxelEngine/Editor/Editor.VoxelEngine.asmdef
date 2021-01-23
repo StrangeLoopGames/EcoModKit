@@ -1,0 +1,14 @@
+{
+    "name": "Editor.VoxelEngine",
+    "references": [
+        "Eco.Client"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

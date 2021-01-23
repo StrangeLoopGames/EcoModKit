@@ -1,0 +1,12 @@
+{
+    "name": "Editor.iTweenEditor",
+    "references": [
+        "Eco.Client"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
