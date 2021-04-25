@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Green Stained Glass Blocks
   m_EditorClassIdentifier: 
   Blocks:
-  - Name: GlassWindow
+  - Name: GreenStainedGlassWindow
     Builder: {fileID: 11400000, guid: 3e6f3fb438eba654fb76a6f1bca550f8, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials: []
@@ -38,7 +38,7 @@ MonoBehaviour:
     IsLadder: 0
     IsSlope: 0
     Editor: {fileID: 0}
-  - Name: GlassStacked1
+  - Name: GreenStainedGlassStacked1
     Builder: {fileID: 11400000, guid: bd1ab67dad594a3418a9ad5f11d39011, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials:
@@ -64,7 +64,7 @@ MonoBehaviour:
     IsLadder: 0
     IsSlope: 0
     Editor: {fileID: 0}
-  - Name: GlassStacked2
+  - Name: GreenStainedGlassStacked2
     Builder: {fileID: 11400000, guid: d87ccca9bb2034645b5fb933c0caaddd, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials:
@@ -90,7 +90,7 @@ MonoBehaviour:
     IsLadder: 0
     IsSlope: 0
     Editor: {fileID: 0}
-  - Name: GlassStacked3
+  - Name: GreenStainedGlassStacked3
     Builder: {fileID: 11400000, guid: e683013261070d043bc834171adbb497, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials:
@@ -116,7 +116,7 @@ MonoBehaviour:
     IsLadder: 0
     IsSlope: 0
     Editor: {fileID: 0}
-  - Name: GlassStacked4
+  - Name: GreenStainedGlassStacked4
     Builder: {fileID: 11400000, guid: d865eaa41bccc5246a56a26d8bdb5024, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials:
@@ -142,9 +142,9 @@ MonoBehaviour:
     IsLadder: 0
     IsSlope: 0
     Editor: {fileID: 0}
-  - Name: GlassCube
+  - Name: GreenStainedGlassCube
     Builder: {fileID: 11400000, guid: 253c0958afbfa0146ba8247315843fb9, type: 2}
-    Material: {fileID: 2100000, guid: 8ed8fc1a2a254994ab6f8b001401a7f9, type: 2}
+    Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials:
     - {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     MinimapColor: {r: 0.77205884, g: 0.9905679, b: 1, a: 1}
@@ -168,7 +168,7 @@ MonoBehaviour:
     IsLadder: 0
     IsSlope: 0
     Editor: {fileID: 0}
-  - Name: GlassFlatRoof
+  - Name: GreenStainedGlassFlatRoof
     Builder: {fileID: 11400000, guid: c8fbc79e3f6563240900802522b21b0b, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials: []

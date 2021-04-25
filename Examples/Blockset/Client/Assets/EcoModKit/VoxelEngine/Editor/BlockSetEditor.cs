@@ -1,9 +1,9 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEditor.UIElements;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using CustomElements;
 
 [CustomEditor(typeof(BlockSet))]
@@ -60,11 +60,16 @@ public class BlockSetEditor : Editor
         allAudioCategory = rootElement.Q("SetAllAudioField") as TextField;
 
         // Update elements
-        blockList.itemHeight = 42;
-        blockList.makeItem = ListView_Makeitem;
-        blockList.bindItem = ListView_BindItem;
-        blockList.onSelectionChanged += ListView_onSelectionChanged;
-        blockList.itemsSource = blockSet.Blocks;
+        blockList.itemHeight         =  42;
+        blockList.makeItem           =  ListView_Makeitem;
+        blockList.bindItem           =  ListView_BindItem;
+
+#if !UNITY_2019_4
+        blockList.onSelectionChange  += ListView_onSelectionChange;
+#else
+        blockList.onSelectionChanged += ListView_onSelectionChange;
+#endif
+        blockList.itemsSource        =  blockSet.Blocks;
         blockList.Refresh();
 
         newBlock.clickable.clicked += NewBlock_Clicked;
@@ -103,19 +108,7 @@ public class BlockSetEditor : Editor
         EditorUtility.SetDirty(blockSet);
     }
 
-    private void ListView_onSelectionChanged(List<object> objs)
-    {
-        if (objs.Count == 0)
-        {
-            selectedBlock = null;
-        }
-        else
-        {
-            selectedBlock = objs[0] as Block;
-        }
-
-        blockElement.Block = selectedBlock;
-    }
+    private void ListView_onSelectionChange(IEnumerable<object> objs) => this.blockElement.Block = this.selectedBlock = objs.FirstOrDefault() as Block;
 
     private VisualElement ListView_Makeitem()
     {
@@ -156,15 +149,11 @@ public class BlockSetEditor : Editor
 
         if (block.Builder is CustomBuilder customBuilder)
         {
-            var go = customBuilder.usageCases[0].mesh;
-            if (go != null)
+            if (customBuilder.usageCases.Count > 0)
             {
+                var go = customBuilder.usageCases[0].mesh;
                 var mf = go.GetComponent<MeshFilter>();
                 preview.image = DrawRenderPreview(new Rect(0, 0, 40, 40), mf.sharedMesh, block.Material);
-            }
-            else
-            {
-                preview.image = Texture2D.blackTexture;
             }
         }
         else if (block.Builder is WeightedPrefabBlockBuilder weightedPrefabBlockBuilder)

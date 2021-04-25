@@ -20,33 +20,31 @@
     using Eco.World.Blocks;
     using Eco.Gameplay.Pipes;
 
-    [RequiresSkill(typeof(GlassworkingSkill), 1)]      
+    [RequiresSkill(typeof(GlassworkingSkill), 1)]
     public partial class GreenStainedGlassRecipe : RecipeFamily
     {
         public GreenStainedGlassRecipe()
         {
-            this.Recipes = new List<Recipe>
-            {
-                new Recipe(
-                    "Green Stained Glass",
-                    Localizer.DoStr("Green Stained Glass"),
-                    new IngredientElement[]
-                    {
-                        new IngredientElement(typeof(SandItem), 3, typeof(GlassworkingSkill), typeof(GlassworkingLavishResourcesTalent)),    
-                    },
-                    new CraftingElement[]
-                    {
-                        new CraftingElement<GreenStainedGlassItem>(),  
-                    }
-                )
-            };
-            this.LaborInCalories = CreateLaborInCaloriesValue(50, typeof(GlassworkingSkill), typeof(GlassRecipe), this.UILink()); 
-            this.ExperienceOnCraft = 1;  
-            this.CraftMinutes = CreateCraftTimeValue(typeof(GlassRecipe), this.UILink(), 1.5f, typeof(GlassworkingSkill), typeof(GlassworkingFocusedSpeedTalent), typeof(GlassworkingParallelSpeedTalent));     
+            var recipe = new Recipe();
+            recipe.Init(
+                "Green Stained Glass",
+                Localizer.DoStr("Green Stained Glass"),
+                new List<IngredientElement>
+                {
+                    new IngredientElement(typeof(SandItem), 6, typeof(GlassworkingSkill), typeof(GlassworkingLavishResourcesTalent)),
+                    new IngredientElement(typeof(CrushedLimestoneItem), 1, true),
+                },
+                new List<CraftingElement>
+                {
+                    new CraftingElement<GreenStainedGlassItem>()
+                });
+            this.Recipes = new List<Recipe> { recipe };
+            this.ExperienceOnCraft = 1;
+            this.LaborInCalories = CreateLaborInCaloriesValue(50, typeof(GlassworkingSkill));
+            this.CraftMinutes = CreateCraftTimeValue(typeof(GreenStainedGlassRecipe), 1.5f, typeof(GlassworkingSkill), typeof(GlassworkingFocusedSpeedTalent), typeof(GlassworkingParallelSpeedTalent));
             this.ModsPreInitialize();
-            this.Initialize(Localizer.DoStr("Green Stained Glass"), typeof(GlassRecipe));
+            this.Initialize(Localizer.DoStr("Green Stained Glass"), typeof(GreenStainedGlassRecipe));
             this.ModsPostInitialize();
-
             CraftingComponent.AddRecipe(typeof(KilnObject), this);
         }
 

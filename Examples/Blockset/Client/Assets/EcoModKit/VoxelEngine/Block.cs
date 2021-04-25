@@ -57,7 +57,9 @@ public partial class Block
 
     public bool IsLadder;
     public bool IsSlope;
-    public bool CanBuild => IsEmpty || IsWater;
+
+    /// <summary> True if the block is empty, water, or a non-tree plant. </summary>
+    public bool CanBuild => IsEmpty || IsWater || IsPlant;
 
 #if UNITY_EDITOR
     public UnityEditor.Editor Editor;

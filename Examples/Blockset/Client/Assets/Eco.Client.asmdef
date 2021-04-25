@@ -33,7 +33,6 @@
         "System.Buffers.dll",
         "ICSharpCode.SharpZipLib.dll",
         "DOTween.dll",
-        "System.Text.Encoding.CodePages.dll",
         "System.Memory.dll",
         "CsvHelper.dll",
         ""
