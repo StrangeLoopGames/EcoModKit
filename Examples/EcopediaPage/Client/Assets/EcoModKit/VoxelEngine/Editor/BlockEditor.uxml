@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:ue="UnityEditor.UIElements"
+  xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+  xsi:schemaLocation="
+    UnityEngine.UIElements ../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+    UnityEditor.UIElements ../../../../UIElementsSchema/UnityEditor.UIElements.xsd">
+  <ui:VisualElement name="Root">
+    <ui:Label text="Block Editor" />
+    <ue:PropertyField binding-path="Name" />
+    <ue:PropertyField binding-path="Layer" />
+    <ue:PropertyField binding-path="Tier" />
+    <ue:PropertyField binding-path="Category" />
+  </ui:VisualElement>
+</ui:UXML>

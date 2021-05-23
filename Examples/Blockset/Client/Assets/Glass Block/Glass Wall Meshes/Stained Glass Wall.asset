@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06e2ecf2771c9142926f067d120ded4, type: 3}
+  m_Name: Stained Glass Wall
+  m_EditorClassIdentifier: 
+  usageCases:
+  - enabled: 1
+    mesh: {fileID: 100000, guid: de984575206df3a49bc55e065ea0e848, type: 3}
+    meshAlternates: []
+    conditions:
+    - offsetType: 15
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 13
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 10
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 12
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  - enabled: 1
+    mesh: {fileID: 100000, guid: 1d89ce4bbc1a6124584f67e4506b3ce5, type: 3}
+    meshAlternates: []
+    conditions:
+    - offsetType: 13
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 15
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 10
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 12
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  - enabled: 1
+    mesh: {fileID: 100000, guid: a5efa013483d2d842bec0c2b93f0fa78, type: 3}
+    meshAlternates: []
+    conditions:
+    - offsetType: 10
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 13
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 15
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 12
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  - enabled: 1
+    mesh: {fileID: 100000, guid: abce526d02265ca4fbb14cbf3806d5d2, type: 3}
+    meshAlternates: []
+    conditions:
+    - offsetType: 15
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 10
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 21
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 20
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  - enabled: 1
+    mesh: {fileID: 100000, guid: abce526d02265ca4fbb14cbf3806d5d2, type: 3}
+    meshAlternates: []
+    conditions:
+    - offsetType: 15
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 10
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 21
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 22
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  - enabled: 1
+    mesh: {fileID: 100000, guid: abce526d02265ca4fbb14cbf3806d5d2, type: 3}
+    meshAlternates: []
+    conditions:
+    - offsetType: 10
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 15
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 4
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 3
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  - enabled: 1
+    mesh: {fileID: 100000, guid: abce526d02265ca4fbb14cbf3806d5d2, type: 3}
+    meshAlternates: []
+    conditions:
+    - offsetType: 10
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 15
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 4
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 5
+      rules:
+      - ruleType: 4
+        ruleString: Building
+        ruleID: 2
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  - enabled: 1
+    mesh: {fileID: 100000, guid: abce526d02265ca4fbb14cbf3806d5d2, type: 3}
+    meshAlternates: []
+    conditions:
+    - offsetType: 10
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    - offsetType: 15
+      rules:
+      - ruleType: 5
+        ruleString: Building
+        ruleID: 2
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  - enabled: 1
+    mesh: {fileID: 100000, guid: de984575206df3a49bc55e065ea0e848, type: 3}
+    meshAlternates: []
+    conditions: []
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  previewMaterial: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}

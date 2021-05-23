@@ -10,29 +10,21 @@ public class ToolInteraction : MonoBehaviour
     public bool TakeRequiresCalories   = true;
     public bool PlaceRequiresCalories  = true;
 
-    // This tool has a custom controller that controls how the how work when player click the Tool Button.
+    // This tool has a custom controller that controls how the tool work when player click the Tool Button.
     public bool HasCustomInputHandler     = false;
-    public Action<ToolInputState> OnPlayerClickToolButton { get; private set; }
+    public ToolInputState inputState      = ToolInputState.None;
 
     public Transform[] Multiples;
 
-    void Start()
-    {
-        // Get the custom input handler of this tool
-        if (HasCustomInputHandler) OnPlayerClickToolButton = GetComponent<CustomToolInputHandler>()?.OnPlayerClickToolButton;
-    }
-
-    
+    /// <summary>
+    /// State of the tool button. (it usually is the left mouse button).
+    /// Tool controller can get the input state from here and controls how the tool works
+    /// </summary>
     public enum ToolInputState
     {
         /// <summary>This initial state is needed. it's the default state of the very first frame. <see cref="FishingController"></summary>
         None,
         ButtonDown,
         ButtonUp
-    }
-
-    public interface CustomToolInputHandler
-    {
-        Action<ToolInputState> OnPlayerClickToolButton { get; }
     }
 }

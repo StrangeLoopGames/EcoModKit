@@ -96,6 +96,10 @@ public class ModExporter : EditorWindow
             EditorUtility.DisplayDialog("Build Error", "Only one scene should be open while building, please close other scenes", "OK");
             return;
         }
+        
+        // Force disable stripUnusedMeshComponents. When enabled Unity will attempt to "optimize" the included
+        // meshes by removing the tangent list used by the mesh builders.
+        PlayerSettings.stripUnusedMeshComponents = false;
 
         var scene = EditorSceneManager.GetSceneAt(0);
         var importer = AssetImporter.GetAtPath(scene.path);
