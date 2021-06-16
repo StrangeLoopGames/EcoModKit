@@ -192,8 +192,12 @@ public class BlockSetEditor : Editor
             previewRenderer.lights[1].intensity = 0.5f;
         }
 
+        // Create a duplicate material with NO_CURVE enabled for rendering the preview
+        Material previewMaterial = Instantiate(material);
+        previewMaterial.EnableKeyword("NO_CURVE");
+
         previewRenderer.BeginStaticPreview(size);
-        previewRenderer.DrawMesh(mesh, Matrix4x4.identity, material, 0);
+        previewRenderer.DrawMesh(mesh, Matrix4x4.identity, previewMaterial, 0);
         previewRenderer.Render();
         return previewRenderer.EndStaticPreview();
     }
