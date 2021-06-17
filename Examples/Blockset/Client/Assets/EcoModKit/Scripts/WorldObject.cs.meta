@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 22281bf2bb54279449ac8e3fbf199314
+timeCreated: 1478722951
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - PickupColliderPrefab: {fileID: 189094, guid: 9140f8e72848f5340957db1f161ce56b,
+      type: 2}
+  executionOrder: 800
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

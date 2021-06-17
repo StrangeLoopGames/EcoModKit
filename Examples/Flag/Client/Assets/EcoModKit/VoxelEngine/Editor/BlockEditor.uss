@@ -1,0 +1,32 @@
+Label {
+}
+
+#ListView {
+    height: 600px;
+}
+
+#ListItem {
+    flex: 1;
+    height: 23px;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+#Preview {
+    flex: 1;
+    width: 42px;
+    height: 42px;
+    max-height: 42px;
+    max-width: 42px;
+    padding-left: 1px;
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+}
+
+#Name {
+    flex: 1;
+    width: 200px;
+    height: 20px;
+    flex-grow: 1;
+}
