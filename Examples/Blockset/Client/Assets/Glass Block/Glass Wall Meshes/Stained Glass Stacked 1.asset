@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06e2ecf2771c9142926f067d120ded4, type: 3}
+  m_Name: Stained Glass Stacked 1
+  m_EditorClassIdentifier: 
+  usageCases:
+  - enabled: 1
+    mesh: {fileID: -927199367670048503, guid: 44b49eb9cc1dbfb49962d7fd1bedfbaf, type: 3}
+    meshAlternates: []
+    conditions:
+    - offsetType: 4
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 13
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 12
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 21
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 15
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 10
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 11
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 16
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 14
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 9
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 2
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 5
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 8
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 7
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 1
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 6
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 3
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 0
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 25
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 22
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 19
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 24
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 18
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 23
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 20
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    - offsetType: 17
+      rules:
+      - ruleType: 3
+        ruleString: 
+        ruleID: 0
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  - enabled: 1
+    mesh: {fileID: 1131593751015502, guid: fcbafa8274c3a5c4083f049303a58290, type: 3}
+    meshAlternates: []
+    conditions: []
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  previewMaterial: {fileID: 0}

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(Renderer))]
 public class MaterialEvents : MonoBehaviour
@@ -15,9 +16,10 @@ public class MaterialEvents : MonoBehaviour
 
     [ColorUsage(true, true)]
     public Color tweenFrom, tweenTo;
+    private Color tweenColor; // this will be used by the Tween to store the current color
     public float tweenLength = 2f;
-    public iTween.EaseType easeType = iTween.EaseType.easeInOutCubic;
-    public iTween.LoopType loopType = iTween.LoopType.pingPong;
+    public Ease easeType = Ease.InOutCubic;
+    public LoopType loopType = LoopType.Yoyo;
     public bool tweenOnEnable = false;
 
     private Renderer r;
@@ -34,18 +36,16 @@ public class MaterialEvents : MonoBehaviour
     public void TweenColor()
     {
         if (!instanced) ForceInstanceMats();
-        iTween.ValueTo(gameObject, iTween.Hash( "delay", 0f, "easetype", easeType, "from", tweenFrom  , "to", tweenTo, "time", tweenLength, "onupdate", "SetColor", "looptype", loopType));
+        DOTween.To(() => tweenColor, (c) => SetColor(c), tweenTo, tweenLength).SetId("tweenColor");
     }
 
     public void StopTweens()
     {
-        iTween.Stop(gameObject);
+        DOTween.Kill("tweenColor");
+        DOTween.Kill("tweenFloat");
     }
 
-    public void TweenFloat(float target)
-    {
-        iTween.ValueTo(gameObject, iTween.Hash( "delay", 0f, "easetype", easeType, "from", r.sharedMaterial.GetFloat(this.ShaderFloatName), "to", target, "time", tweenLength, "onupdate", "SetFloat", "looptype", loopType));
-    }
+    public void TweenFloat(float target) => DOTween.To(() => r.sharedMaterial.GetFloat(this.ShaderFloatName), (value) => SetFloat(value), target, tweenLength).SetId("tweenFloat");
 
     public void SetFloat(float value)
     {
@@ -115,6 +115,7 @@ public class MaterialEvents : MonoBehaviour
     // called by TweenColor
     public void SetColor(Color c)
     {
+        tweenColor = c;
         foreach(Material m in r.sharedMaterials)
             m.SetColor(ShaderColorName, c);
     }

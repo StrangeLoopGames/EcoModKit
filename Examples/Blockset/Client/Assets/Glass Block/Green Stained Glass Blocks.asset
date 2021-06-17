@@ -42,7 +42,7 @@ MonoBehaviour:
     Builder: {fileID: 11400000, guid: bd1ab67dad594a3418a9ad5f11d39011, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials:
-    - {fileID: 2100000, guid: 8175d33ff8a5fe345a3c26b8fba9594d, type: 2}
+    - {fileID: 2100000, guid: 6087f812f81f40a4085689966d06cc3e, type: 2}
     MinimapColor: {r: 0.77205884, g: 0.9905679, b: 1, a: 1}
     IsDiggable: 0
     IsWater: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
     Builder: {fileID: 11400000, guid: d87ccca9bb2034645b5fb933c0caaddd, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials:
-    - {fileID: 2100000, guid: 8175d33ff8a5fe345a3c26b8fba9594d, type: 2}
+    - {fileID: 2100000, guid: 6087f812f81f40a4085689966d06cc3e, type: 2}
     MinimapColor: {r: 0.77205884, g: 0.9905679, b: 1, a: 1}
     IsDiggable: 0
     IsWater: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
     Builder: {fileID: 11400000, guid: e683013261070d043bc834171adbb497, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials:
-    - {fileID: 2100000, guid: 8175d33ff8a5fe345a3c26b8fba9594d, type: 2}
+    - {fileID: 2100000, guid: 6087f812f81f40a4085689966d06cc3e, type: 2}
     MinimapColor: {r: 0.77205884, g: 0.9905679, b: 1, a: 1}
     IsDiggable: 0
     IsWater: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
     Builder: {fileID: 11400000, guid: d865eaa41bccc5246a56a26d8bdb5024, type: 2}
     Material: {fileID: 2100000, guid: 43cd4adfe9e795a47a61b98cc80cc403, type: 2}
     Materials:
-    - {fileID: 2100000, guid: 8175d33ff8a5fe345a3c26b8fba9594d, type: 2}
+    - {fileID: 2100000, guid: 6087f812f81f40a4085689966d06cc3e, type: 2}
     MinimapColor: {r: 0.77205884, g: 0.9905679, b: 1, a: 1}
     IsDiggable: 0
     IsWater: 0

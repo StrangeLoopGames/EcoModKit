@@ -92,4 +92,32 @@
     [Serialized, Solid] public class GreenStainedGlassStacked2Block : PickupableBlock { }
     [Serialized, Solid] public class GreenStainedGlassStacked3Block : PickupableBlock { }
     [Serialized, Solid,Wall] public class GreenStainedGlassStacked4Block : PickupableBlock { } //Only a wall if it's all 4 Glass
+
+    [Serialized]
+    [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [BlockTier(2)]
+    [IsForm(typeof(WindowFormType), typeof(GreenStainedGlassItem))]
+    public partial class GreenStainedGlassWindowBlock :
+        Block, IRepresentsItem
+    {
+        public Type RepresentedItemType { get { return typeof(GreenStainedGlassItem); } }
+    }
+    [Serialized]
+    [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [BlockTier(2)]
+    [IsForm(typeof(CubeFormType), typeof(GreenStainedGlassItem))]
+    public partial class GreenStainedGlassCubeBlock :
+        Block, IRepresentsItem
+    {
+        public Type RepresentedItemType { get { return typeof(GreenStainedGlassItem); } }
+    }
+    [Serialized]
+    [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [BlockTier(2)]
+    [IsForm(typeof(FlatRoofFormType), typeof(GreenStainedGlassItem))]
+    public partial class GreenStainedGlassFlatRoofBlock :
+        Block, IRepresentsItem
+    {
+        public Type RepresentedItemType { get { return typeof(GreenStainedGlassItem); } }
+    }
 }

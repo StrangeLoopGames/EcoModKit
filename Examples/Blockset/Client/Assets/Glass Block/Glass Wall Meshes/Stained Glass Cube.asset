@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06e2ecf2771c9142926f067d120ded4, type: 3}
+  m_Name: Stained Glass Cube
+  m_EditorClassIdentifier: 
+  usageCases:
+  - enabled: 1
+    mesh: {fileID: -927199367670048503, guid: dce58f5aa1a99ce4f971f54584fc7cf1, type: 3}
+    meshAlternates: []
+    conditions: []
+    applyConditionsToAllRotations: 1
+    axis: 1
+    dontRotateBaseMesh: 0
+    importRotation: {x: 0, y: 0, z: 0}
+    decorativeBuilders: []
+  previewMaterial: {fileID: 0}

@@ -5,9 +5,10 @@ using System.Linq;
 [Serializable]
 public class StringToLocalize
 {
-    public string String { get; set; }
-    public string Source { get; set; }
-    public string Comment { get; set; }
+    public string String  { get; set; } // String to localize
+    public string Source  { get; set; } // String extraction localization
+    public string Comment { get; set; } // The context comment for localization
+    public bool   AutoLoc { get; set; } // localization was automatic (or manual)
 
     public static implicit operator StringToLocalize(EmbeddedLocString locString) => new StringToLocalize { String = locString.String };
     public static implicit operator StringToLocalize(string str) => new StringToLocalize { String = str };
