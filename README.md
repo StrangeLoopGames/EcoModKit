@@ -1,4 +1,4 @@
-# EcoModKit
+# Eco ModKit
 
 Greetings Citizens!
 
@@ -6,6 +6,7 @@ This repository is home to some examples of mods that can be created with Eco's 
 
 Current examples:
 * [Blockset](Examples/Blockset) - A blockset that creates gree stained glass windows
+* [DiscordAccessMod](Examples/DiscordAccessMod) - An example mod that uses Discord roles to give whitelist access using ``IUserAuthorizer``.
 * [EchoCommand](Examples/EchoCommand) - A chat command that echos back the message you give it
 * [EcopediaPage](Examples/EcopediaPage) - An Ecopedia Page that adds a rules page for servers
 * [Flag](Examples/Flag) - A flag object with animation that can be turned of and off
