@@ -5,7 +5,7 @@ Greetings Citizens!
 This repository is home to some examples of mods that can be created with Eco's ModKit. If you're just getting started check the [Wiki](https://wiki.play.eco/en/Mod_Development) for more details.
 
 Current examples:
-* [Blockset](Examples/Blockset) - A blockset that creates gree stained glass windows
+* [Blockset](Examples/Blockset) - A blockset that creates green stained glass windows
 * [EchoCommand](Examples/EchoCommand) - A chat command that echos back the message you give it
 * [EcopediaPage](Examples/EcopediaPage) - An Ecopedia Page that adds a rules page for servers
 * [Flag](Examples/Flag) - A flag object with animation that can be turned of and off
