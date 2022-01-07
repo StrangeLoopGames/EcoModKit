@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Atmosphere
+  - Meteor
+  - ModItem
+  - ModObject
+  - ModBlock
+  - Block
+  - WorldObject
+  - Item
+  - ModBenefit
+  - FirstPersonCamera
+  - Hand
+  - ModImage
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcess
+  - Terrain
+  - IgnorePlayer
+  - Player
+  - PlayerFeet
+  - Minimap
+  - Atmosphere
+  - IgnoreSelfCollision
+  - Avatar
+  - Fade
+  - TerrainColliders
+  - Animals
+  - Foliage
+  - OnlyGI
+  - IgnoreInteraction
+  - DecorationSpawnQuery
+  - MovingPlatform
+  - MovingPlatformSimulation
+  - FirstPersonView
+  - 
+  - BlockSelection
+  - TitleScreenTerrain
+  - TitleScreen
+  - ShadowPlacement
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

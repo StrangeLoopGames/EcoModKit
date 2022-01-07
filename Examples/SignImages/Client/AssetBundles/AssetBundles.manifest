@@ -1,7 +1,7 @@
 ManifestFileVersion: 0
-CRC: 3897711620
+CRC: 1729017715
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: signsmod
+      Name: signmod
       Dependencies: {}

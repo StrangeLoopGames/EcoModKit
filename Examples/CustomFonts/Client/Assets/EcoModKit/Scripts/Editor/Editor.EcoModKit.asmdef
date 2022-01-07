@@ -1,0 +1,14 @@
+{
+    "name": "Editor.EcoModKit",
+    "references": [
+        "Eco.Client",
+        "Unity.TextMeshPro",
+        "Editor.VoxelEngine"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
