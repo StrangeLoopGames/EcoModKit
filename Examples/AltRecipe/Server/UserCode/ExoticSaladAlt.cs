@@ -22,9 +22,9 @@ namespace Eco.Mods.TechTree
     /// <para>More information about RecipeFamily objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.RecipeFamily.html</para>
     /// </summary>
     [RequiresSkill(typeof(CookingSkill), 1)]
-    public partial class ExoticSaladRecipe : RecipeFamily
+    public partial class ExoticSaladAltRecipe : RecipeFamily
     {
-        public ExoticSaladRecipe()
+        public ExoticSaladAltRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
