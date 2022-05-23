@@ -1,0 +1,8 @@
+#top-area {
+}
+
+.top-area {
+    flex-direction: column;
+    height: auto;
+    flex-grow: 1;
+}

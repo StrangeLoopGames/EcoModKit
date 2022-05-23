@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Eco custom weavers.</xs:documentation>
+  </xs:annotation>
+  <xs:choice>
+    <xs:element name="TypeRewrite" minOccurs="0" maxOccurs="unbounded">
+      <xs:complexType>
+        <xs:annotation>
+          <xs:documentation>Rewrites one type with another using mapping.</xs:documentation>
+        </xs:annotation>
+        <xs:choice>
+          <xs:element name="MemberRewrite" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:attribute name="From" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Member to map from.</xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+              <xs:attribute name="To" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Member to map to.</xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+        <xs:attribute name="From" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Type to map from.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="To" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Type to map to.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:complexType>
+    </xs:element>
+  </xs:choice>
+</xs:complexType>

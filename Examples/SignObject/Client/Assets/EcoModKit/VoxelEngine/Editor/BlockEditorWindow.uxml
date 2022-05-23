@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="BlockEditorWindow.uss" />
+    <ui:VisualElement name="root">
+        <ui:VisualElement name="top-area" class="top-area" style="flex-basis: 80%; height: 417px; width: 349px;">
+            <ui:ListView focusable="true" name="BlockList" binding-path="Blocks" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="bottom-bar" style="flex-direction: row-reverse;">
+            <ui:Button text="Close" display-tooltip-when-elided="true" name="close" />
+            <ui:Button text="Retrieve" display-tooltip-when-elided="true" name="retrieve" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
