@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eco.WebServer</name>
+    </assembly>
+    <members>
+        <member name="T:Eco.WebServer.DataTransferObjects.CommandMessageDTO">
+            <summary>Represents a chat output result from a command.</summary>
+        </member>
+        <member name="T:Eco.WebServer.DataTransferObjects.CommandResultDTO">
+            <summary>Result object from a command execution</summary>
+        </member>
+        <member name="P:Eco.WebServer.DataTransferObjects.CommandResultDTO.OriginalCommand">
+            <summary>Represents the original requested command</summary>
+        </member>
+        <member name="P:Eco.WebServer.DataTransferObjects.CommandResultDTO.Errored">
+            <summary>Flag determining if there was an error during execution</summary>
+        </member>
+        <member name="F:Eco.WebServer.DataTransferObjects.CommandResultDTO.CommandMessages">
+            <summary>Represents each returned action/message result from the command</summary>
+        </member>
+        <member name="T:Eco.WebServer.DataTransferObjects.ExecuteCommandDTO">
+            <summary>Represents a command execution request for the command MVC controller</summary>
+        </member>
+        <member name="T:Eco.WebServer.DataTransferObjects.ProfilingResultDTO">
+            <summary>Result object from a command execution</summary>
+        </member>
+        <member name="T:Eco.WebServer.Results.JsonStreamResult">
+            <summary>Custom implementation of <seealso cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> for streaming large amounts of JSON data using async methods from an <seealso cref="T:System.Collections.IEnumerable"/></summary>
+            <inheritdoc/>
+        </member>
+        <member name="P:Eco.WebServer.Results.JsonStreamResult.Enumerable">
+            <summary><seealso cref="T:System.Collections.IEnumerable"/> instance to stream over HTTP/HTTPS to the client.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Authentication.ClaimExtensions.ToStringLower(System.Boolean)">
+            <summary>Returns lowercase boolean value as string.</summary>
+            <remarks>Implementation as suggested by Microsoft: https://docs.microsoft.com/en-us/dotnet/api/system.boolean.tostring#:~:text=This%20method%20returns%20the%20constants%20%22True%22%20or%20%22False%22.%20Note,should%20be%20called%20first%20to%20convert%20it%20to%20lowercase.</remarks>
+        </member>
+        <member name="T:Eco.WebServer.Web.Authentication.SlgClaimTypes">
+            <summary>
+            A list of non-standard claims for an Eco user. These come from the user in the accounts database.
+            </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Authentication.SlgClaimTypes.Name">
+            <summary> Name of user. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Authentication.SlgClaimTypes.SlgId">
+            <summary> SLG ID of user. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Authentication.SlgClaimTypes.SteamId">
+            <summary> SteamId of user if available </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Authentication.SlgClaimTypes.IsApiUser">
+            <summary> "true" if the user is an api user. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Authentication.SlgClaimTypes.IsAdmin">
+            <summary> "true" if the user is a server admin. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Authentication.SlgClaimTypes.IsDev">
+            <summary> "true" if the user is developer tier. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Authentication.SlgClaimTypes.IsSlgDev">
+            <summary> "true" if the user is a developer from SLG. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Authentication.SlgClaimTypes.AccountLevel">
+            <summary> The raw account level of the user from the accounts database. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Authentication.SlgClaimTypes.SelectedIcon">
+            <summary> The user's selected icon. </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Authentication.EcoUserIdentity">
+            <summary>
+            Custom ClaimsIdenty to pass Eco's User class through to controllers via HttpContext.User.Identity.
+            Use extension method Controller.GetUserFromContext() to retrive the User.
+            </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.EcoApiAuthentication">
+            <summary>Eco authentication handler, pulls the "apikey" parameter from the query string and validates the api user.</summary>
+            <inheritdoc/>
+        </member>
+        <member name="F:Eco.WebServer.Web.EcoApiAuthentication.AuthenticationType">
+            <summary> Name of custom authentication type. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.EcoApiAuthentication.SchemeName">
+            <summary> Name of custom authentication scheme, which is referenced when setting it up. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.EcoApiAuthentication.HandleAuthenticateAsync">
+            <summary>
+            Handle authentication. Returns a AuthenticateResult, which is created from a claims principal and a custom Eco claims identity.
+            See "Principal and Identity Objects" for more information about users in ASP.NET.
+            </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.EcoAuthentication">
+            <summary>Eco authentication handler, pulls the "authtoken" and "authtokentype" parameters from the query string and validates the user.</summary>
+            <inheritdoc/>
+        </member>
+        <member name="F:Eco.WebServer.Web.EcoAuthentication.AuthenticationType">
+            <summary> Name of custom authentication type. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.EcoAuthentication.SchemeName">
+            <summary> Name of custom authentication scheme, which is referenced when setting it up. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.EcoAuthentication.HandleAuthenticateAsync">
+            <summary>
+            Handle authentication. Returns a AuthenticateResult, which is created from a claims principal and a custom Eco claims identity.
+            See "Principal and Identity Objects" for more information about users in ASP.NET.
+            </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Authorization.AdministratorRequirementHandler">
+            <summary>
+            Custom AuthorizationHandler for admin check due to needing to also check if dev.
+            See "Policy-based authorization in ASP.NET Core".
+            </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Authorization.AdministratorRoleRequirement">
+            <summary>
+            Custom requirement for the AdministratorRequirementHandler AuthorizationHandler.
+            See "Policy-based authorization in ASP.NET Core".
+            </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Authorization.PolicyNames">
+            <summary>
+            Names of policies that are used with Authorize attribute, eg `[Authorize(Policy = PolicyNames.RequireAdmin)]`.
+            See "Policy-based authorization in ASP.NET Core".
+            </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.AdminController">
+            <summary>Admin Controller.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.AdminController.PostSetAccess(System.String,System.String)">
+            <summary>Sets how accessible this server is.</summary>
+            <param name="value">Can be 'public' (listed in server browser, no password), 'private' (listed in server browser, with password) or 'hidden' (unlisted, without password).</param>
+            <param name="password">If setting private, must set a password. If not set to private, this is unused.</param>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.ChatController">
+            <summary>MVC <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller"/> instance for accessing and interacting with the Eco server Chat system.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ChatController.GetChat(System.Double,System.Double)">
+            <summary>Returns all non-private player chat messages sent within the given time range.</summary>
+            <param name="startDay">The lower bound on the time range. Default is 0.</param>
+            <param name="endDay">The upper bound on the time range. Default is now.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ChatController.GetChatByTag(System.String,System.Double,System.Double)">
+            <summary>Returns all non-private player chat messages sent to the given tag within the given time range.</summary>
+            <param name="tag">The tag name in question.</param>
+            <param name="startDay">The lower bound on the time range. Default is 0.</param>
+            <param name="endDay">The upper bound on the time range. Default is now.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ChatController.GetChatMessagesSentBy(System.String,System.Double,System.Double)">
+            <summary>Returns all non-private chat messages sent by the given user within the given time range.</summary>
+            <param name="username">The user in question.</param>
+            <param name="startDay">The lower bound on the time range. Default is 0.</param>
+            <param name="endDay">The upper bound on the time range. Default is now.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ChatController.GetNext(Eco.WebServer.DataTransferObjects.ChatMessageDTO,System.Int32)">
+            <summary>Gets the. <code>numNextMessages</code> chat messages sent after the given message on the same tag.</summary>
+            <param name="message">The message in question.</param>
+            <param name="numNextMessages">The number of following messages to return.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ChatController.GetPrevious(Eco.WebServer.DataTransferObjects.ChatMessageDTO,System.Int32)">
+            <summary>Gets the. <code>numPreviousMessages</code> chat messages sent before the given message on the same tag.</summary>
+            <param name="message">The message in question.</param>
+            <param name="numPreviousMessages">The number of preceding messages to return.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ChatController.SendChat(System.String,System.String)">
+            <summary>Sends chat message like username.</summary>
+            <param name="message">The message to send.</param>
+            <param name="username">User who wants to send message.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ChatController.ToGameMessage(Eco.WebServer.DataTransferObjects.ChatMessageDTO)">
+            <summary>Converts a <seealso cref="T:Eco.WebServer.DataTransferObjects.ChatMessageDTO"/> instance to a regular Eco <seealso cref="T:Eco.Gameplay.Systems.Messaging.Chat.ChatMessage"/> instance.</summary>
+            <param name="message"><seealso cref="T:Eco.WebServer.DataTransferObjects.ChatMessageDTO"/> instance to convert.</param>
+            <returns>Converted <seealso cref="T:Eco.Gameplay.Systems.Messaging.Chat.ChatMessage"/> instance.</returns>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.CommandController">
+            <summary>MVC <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller"/> instance for accessing and interacting with the Eco server chat commands.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.CommandController.ExecCommand(Eco.WebServer.DataTransferObjects.ExecuteCommandDTO)">
+            <summary>Executes a chat command on the server.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ControllerExtensions.GetUserFromContext(Microsoft.AspNetCore.Mvc.Controller)">
+            <summary>Get an Eco user from the controller's HttpContext (if any).</summary>
+            <returns>User that's logged in, or null if none.</returns>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.ElectionController">
+            <summary> The API controller in charge of the election system. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.ListElectedTitles(Eco.Shared.Items.ProposableState)">
+            <summary> Returns all elected titles and their occupants matching the given state (active by default). </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.ListElections(System.Boolean)">
+            <summary> Returns all elections that are either active or inactive.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.GetElectionById(System.Int32)">
+            <summary>Returns the election with the given id. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.GetElectedTitleById(System.Int32)">
+            <summary>Returns the elected title with the given id. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.Votes(System.Int32)">
+            <summary> Returns a list of votes that were made on the indicated election. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.Vote(Eco.WebServer.DataTransferObjects.RunoffVoteDTO,System.Boolean)">
+            <summary> Places a vote on behalf of the given player.  Can only be called if an election is currently running. </summary>
+            <param name="vote">The player's vote.  Must contain a ranked list of all candidates for the current election.</param>
+            <param name="forceVote">Force vote ignoring election process.</param>
+            <returns>A failure code if the vote is invalid, the player is not authorized, or the vote cannot be placed for another reason.</returns>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.ForceElectionEnd(System.Int32)">
+            <summary> Forces the currently running election to end now, and for the current election winner to become the leader. Can only be called by an admin or dev. </summary>
+            <param name="electionId">ID of the election.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.AddComment(Eco.WebServer.DataTransferObjects.ElectionCommentDTO,System.Int32)">
+            <summary> Adds a comment to the currently running election, if any. </summary>
+            <param name="comment">The comment to be added to the election.</param>
+            <param name="electionId">ID of the election.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.GetComments(System.Int32)">
+            <summary> List comments on the election. </summary>
+            <param name="electionId">ID of the election.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ElectionController.GenerateTestData">
+            <summary> Create a bunch of test elections.</summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.LawController">
+            <summary> The API controller in charge of the law system. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.LawController.List(System.String)">
+            <summary> Returns all laws currently present in the game in the specified states, active by default.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.LawController.ListAll">
+            <summary> Returns all laws currently present in the game </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.LawController.GetLaw(System.Int32)">
+            <summary> Returns the law with the specified id. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.LawController.GenerateTestData">
+            <summary> Genereate test laws. </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.LogController">
+            <summary>MVC <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller"/> instance that provides API access to the logs generated by the Eco game server.</summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.LogController.GetAllLogs">
+            <summary>Retrieves a list of all log files on the server.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.LogController.GetCategoryLogs(System.String)">
+            <summary>Retrieves a list of all log files in the requested category subfolder if it exists.</summary>
+            <param name="category">Category log subfolder to search.</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.LogController.GetLogFile(System.String)">
+            <summary>Streams a log file over HTTP/HTTPS to a client.</summary>
+            <param name="filepath">Filepath of the log file to stream.</param>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.PluginsController">
+            <summary>
+            The API controller in charge of the plugins and config.
+            </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.PluginsController.GetPlugins">
+            <summary>
+            Gets the list and status of all running plugins on the server.
+            </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.PluginsController.PostPluginConfig(System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Sets the configuration options for the given plugin.
+            </summary>
+            <param name="name">The name of the plugin.</param>
+            <param name="body">New plugin config.</param>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.ProfilingResultsController">
+            <summary>Provides endpoints to list and download profiling results generated by <see cref="T:Eco.Plugins.Profiling.ProfilingPlugin"/>.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.ProfilingResultsController.List">
+            <summary>Returns the list of generated profiling results.</summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.RootController">
+            <summary>Root Controller for the Eco Game API.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.RootController.GetAdmins">
+            <summary>Returns the server's configured administrative users.</summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.RootController.IsAdmin">
+            <summary>Return if the user is an admin and authentication is required.</summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.StatsController">
+            <summary> The API controller in charge of anything stats-y. </summary>
+        </member>
+        <member name="F:Eco.WebServer.Web.Controllers.StatsController.MaximumSamples">
+            <summary> Maximum amount of samples sent at any time. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.StatsController.GetTimeRange">
+            <summary>/// Returns the timerange of the simulation, in days///. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.StatsController.GetTreeList">
+            <summary> Returns all dataset keys, formatted as a tree. ///. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.StatsController.GetFlatList">
+            <summary> /// Returns all stat infos that contain data, formatted as a list, where each key is a list of strings. ///. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.StatsController.Get(System.String,System.Double,System.Double)">
+            <summary> /// Returns <see cref="F:Eco.WebServer.Web.Controllers.StatsController.MaximumSamples"/> data points between <paramref name="dayStart"/> and <paramref name="dayEnd"/> of the selected data.
+            If there are more than <see cref="F:Eco.WebServer.Web.Controllers.StatsController.MaximumSamples"/> samples, it will be averaged out to contain exactly <see cref="F:Eco.WebServer.Web.Controllers.StatsController.MaximumSamples"/>.///. </summary>
+            <param name="dataset">dataset to take the data from.</param>
+            <param name="dayStart">Day from which on data is returned. Default is 0.</param>
+            <param name="dayEnd">Day until which data is returned. Default is now.</param>
+            <returns>A list of floats that returns the data. Might be averaged out if there were too many data points.</returns>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.StatsController.GetList(System.Collections.Generic.List{System.String},System.Double,System.Double)">
+            <summary> Returns a "package" of multiple statistics in the order of their request. </summary>
+            <param name="dayStart">Day from which the data should be taken from. Default is 0.</param>
+            <param name="dayEnd">Day until which data is returned. Default is now.</param>
+            <param name="requestedSets">A list of statistics that should be returned.</param>
+            <returns>The statistics to each of the sets, or null if not found, in the order of their request.</returns>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.StatsController.Graphs">
+            <summary> Returns the list of premade graphs to be displayed on the front page. </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.StatsController.GenerateTestData(System.Single,System.Int32,System.Boolean,System.Single)">
+            <summary>
+            Generates fake stat data for testing.
+            </summary>
+            <param name="days">The number of days to simulate.</param>
+            <param name="users">The number of users to simulate.</param>
+            <param name="generateClimateData">Whether to generate climate data. Default is false.</param>
+            <param name="pollutionMultiplier">How much pollution to generate. Default is 1.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.UsersController">
+            <summary> The API controller for collecting users by parameters. </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Controllers.WorldLayerController">
+            <summary>
+            The API controller that exposes world layers and their relationships.
+            </summary>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.WorldLayerController.ListLayers">
+            <summary>
+            Enumerates every world layer in the simulation.
+            </summary>
+            <returns>A list of all layers in the simulation.</returns>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.WorldLayerController.ListRelevantLayers(System.String,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Enumerates the layers that should be displayed when the user is focused on a particular layer and world area.
+            </summary>
+            <param name="focusLayer">Name of the layer we're querying.</param>
+            <param name="minX">The least x boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <param name="minY">The least y boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <param name="maxX">The greatest x boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <param name="maxY">The greatest y boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <returns>
+            An array of structures describing the layers that should be displayed.
+            </returns>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.WorldLayerController.AreaDescription(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Describes the area selected with a string.
+            </summary>
+            <param name="minX">The least x boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <param name="minY">The least y boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <param name="maxX">The greatest x boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <param name="maxY">The greatest y boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <returns>
+            An string describing the requested area.
+            </returns>
+        </member>
+        <member name="M:Eco.WebServer.Web.Controllers.WorldLayerController.ListRelevantRelationships(System.String,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Enumerates the layer relationships that should be displayed when the user is focused on a particular layer and world area.
+            </summary>
+            <param name="focusLayer">The name of the focused layer.</param>
+            <param name="minX">The least x boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <param name="minY">The least y boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <param name="maxX">The greatest x boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <param name="maxY">The greatest y boundary of the viewed area, in world coordinates.  Should not be wrapped.</param>
+            <returns>
+            An array of structures describing the layer relationships that should be displayed.
+            </returns>
+        </member>
+        <member name="T:Eco.WebServer.Web.Filters.DebugCallAttribute">
+            <summary>
+            Attribute for actions that should only be available when UserManager.Config.AllowDebugCalls is true.
+            </summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Models.ChatCommandRequest">
+            <summary>Defines an <seealso cref="T:Eco.Gameplay.Systems.Chat.IChatClient"/> instance for making web based command requests.</summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:Eco.WebServer.Web.Models.ChatCommandRequest.ExecuteCommand(System.String)">
+            <summary>Executes the command request instance with the specified command</summary>
+            <param name="command">Command to execute</param>
+        </member>
+        <member name="M:Eco.WebServer.Web.Models.ChatCommandRequest.GetResponseDTO">
+            <summary>Returns the finalized <seealso cref="T:Eco.WebServer.DataTransferObjects.CommandResultDTO"/> object</summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Swagger.AuthPolicyOperationFilter">
+            <summary>Custom <seealso cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter"/> for populating Eco authentication information into the server's Swagger documentation.</summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Swagger.DebugCallPolicyOperationFilter">
+            <summary>Custom <seealso cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter"/> for added information into the server's Swagger documentation about debug calls.</summary>
+        </member>
+        <member name="T:Eco.WebServer.Web.Swagger.TagDescriptionsDocumentFilter">
+            <summary>Custom implementation of <seealso cref="T:Swashbuckle.AspNetCore.SwaggerGen.IDocumentFilter"/> for automatically populating the root level tags used by our DocFX generator.</summary>
+        </member>
+        <member name="T:Eco.WebServer.Controllers.MapController">
+            <summary>
+            The API controller in charge of the map and entities found on it.
+            </summary>
+        </member>
+        <member name="M:Eco.WebServer.Controllers.MapController.EntityTypes">
+            <summary>
+            Allows access to all species currently available in the simulation.
+            </summary>
+            <returns>A list of all species.</returns>
+        </member>
+        <member name="M:Eco.WebServer.Controllers.MapController.Entities(System.String[],System.String[])">
+            <summary>
+            Allows access to all entities currently available in the simulation.
+            </summary>
+            <param name="entityTypes">A list of user type names that will be used to filter the response.</param>
+            <param name="states">A list of Animal states that will be used to filter the response.</param>
+            <returns>A list of the positions of all organisms.</returns>
+        </member>
+        <member name="M:Eco.WebServer.Controllers.MapController.GetDimension">
+            <summary>
+            Returns the dimension of the world, in blocks.
+            </summary>
+            <returns>The world size as vector3.</returns>
+        </member>
+        <member name="M:Eco.WebServer.Controllers.MapController.LayerList">
+            <summary>
+            List Layer Names.
+            </summary>
+            <returns>A list of all layers.</returns>
+        </member>
+        <member name="M:Eco.WebServer.Controllers.MapController.MakeMapJSON">
+            <summary>
+            One request to get all required web map data.
+            </summary>
+            <returns>layer names, property list, water level, world time and district maps.</returns>
+        </member>
+        <member name="M:Eco.WebServer.Controllers.MapController.WaterLevel">
+            <summary>
+            Get water height.
+            </summary>
+            <returns>Water Level.</returns>
+        </member>
+    </members>
+</doc>

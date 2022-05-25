@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eco.Stats</name>
+    </assembly>
+    <members>
+        <member name="T:Eco.Stats.IActionStat">
+            <summary>Interface for "action" stats. Action is deterministic and so can be identified by <see cref="P:Eco.Stats.IActionStat._id"/> and has <see cref="P:Eco.Stats.IActionStat.Time"/> when it happened.</summary>
+        </member>
+        <member name="T:Eco.Stats.IStat">
+            <summary>Interface for all stats which may be recorded in <see cref="T:Eco.Stats.Stats"/> database.</summary>
+        </member>
+        <member name="T:Eco.Stats.NoStatsAttribute">
+            <summary> Prevents an action from being tracked in stats. </summary>
+        </member>
+        <member name="T:Eco.Stats.ICountStat">
+            <summary>Stat which has <see cref="P:Eco.Stats.ICountStat.Count"/> value. It may be used primary for the aggregation or when action performed on multiple items, but 
+            should be counted for each of them (i.e. "buy" for N items should be same as two "buy" actions for N/2 items, and for pollution the amount is the total pollution quantity).</summary>
+        </member>
+        <member name="T:Eco.Stats.IAggregatableStat">
+            <summary>Interface for aggregatable stats which may be merged together into less granular units. I.e. into minutes or hours.</summary>
+        </member>
+        <member name="M:Eco.Stats.IStats.CountStat(System.Type,System.Single,System.Double,System.Int32)">
+            <summary> Returns sum of stat values stored in db based on stat type </summary>
+        </member>
+        <member name="M:Eco.Stats.IStats.CountStat(System.String,System.Single,System.Double,System.Int32)">
+            <summary> Returns sum of stat values stored in db based on ActionName </summary>
+        </member>
+        <member name="M:Eco.Stats.IStats.CountStatPerPlayer(System.Type,System.Single,System.Double)">
+            <summary> Returns sum of stat values stored in db per user. You can use it instead of CountStat when you work at all users same time, by example, when you evaulting demographic criteria for all useres. It uses type of stat </summary>
+        </member>
+        <member name="M:Eco.Stats.IStats.CountStatPerPlayer(System.String,System.Single,System.Double)">
+            <summary> Returns sum of stat values stored in db per user. You can use it instead of CountStat when you work at all users same time, by example, when you evaulting demographic criteria for all useres. It uses action name </summary>
+        </member>
+        <member name="T:Eco.Stats.LiteDbEnumMapper">
+            <summary>
+            This class responsible for mapping between code enums which uses by IStat and mapped database values.
+            It should be created with <see cref="T:Eco.Stats.LiteDbService"/> and then initialized with call to <see cref="M:Eco.Stats.LiteDbEnumMapper.Initialize"/>.
+            When initialized it will automatically convert all enum values to integers when serializing to DB.
+            By default all enum values serialized as strings. Using integers instead helps to save lot of space.
+            Using enums meta table required to keep mapping in sync and also may be used to resolve mapped enum value to string with DB only data.
+            </summary>
+        </member>
+        <member name="M:Eco.Stats.LiteDbEnumMapper.Initialize">
+            <summary>Initializes <see cref="T:Eco.Stats.LiteDbEnumMapper"/>. It syncs all stat's enums with database, builds mapping between enum value and mapped value (stored in db) and then registers custom enum members resolver.</summary>
+        </member>
+        <member name="M:Eco.Stats.LiteDbEnumMapper.SyncWithDatabase">
+            <summary>Syncs DB enum collection with all enums contained in any class that implements IStat.</summary>
+        </member>
+        <member name="M:Eco.Stats.LiteDbEnumMapper.SyncEnum(System.Type,System.Collections.Generic.Dictionary{System.String,System.String[]},System.Int32@)">
+            <summary>
+            Syncs enum names from DB and enums names from code. It returns list of new records (which was added to code).
+            If DB contains records which no more exists in code then it will fail with error, because these records requires migration.
+            </summary>
+        </member>
+        <member name="M:Eco.Stats.LiteDbEnumMapper.BuildMapping">
+            <summary>Builds mapping between mapped value (integer) and enum value.</summary>
+        </member>
+        <member name="M:Eco.Stats.LiteDbEnumMapper.ResolveEnumMember(System.Type,System.Reflection.MemberInfo,LiteDB.MemberMapper)">
+            <summary>Resolves enum member of <see cref="T:Eco.Stats.IStat"/> by assigning custom serializers which serializes enums as mapped integer values.</summary>
+        </member>
+        <member name="T:Eco.Stats.LiteDbService">
+            <summary> <see cref="T:Eco.Stats.LiteDbService"/> manages creation, access and transactions for LiteDB. </summary>
+        </member>
+        <member name="P:Eco.Stats.LiteDbService.Database">
+            <summary> Database accessor. </summary>
+        </member>
+        <member name="M:Eco.Stats.LiteDbService.WithPausedWritesAsync(System.Func{System.Threading.Tasks.Task},System.Boolean)">
+            <summary> Invokes <paramref name="action"/> with paused the database file writes. It ensures no modifications to the database file happen during the action execution and you can safely copy or backup the file. </summary>
+        </member>
+        <member name="M:Eco.Stats.LiteDbService.WithTransaction(System.Action)">
+            <summary> Performs set of operations in a transaction. All operations within transaction will either be committed or rollback. </summary>
+        </member>
+        <member name="T:Eco.Stats.SortedArrayDictionary`2">
+            <summary>
+            Highly optimized dictionary-like data structure with sorted keys. Allows effectively find first element lesser or equal than key with <see cref="M:Eco.Stats.SortedArrayDictionary`2.TryGetLesserOrEqualThan(`0,`1@)"/>
+            and may be extended for iterating all elements in sorted order or to get elements greater than specific key.
+            Initially was used for LiteDb custom transactions implementations, but now may be used for other means.
+            </summary>
+        </member>
+        <member name="T:Eco.Stats.EssentialAggregateGroupingAttribute">
+            <summary>Marks that property is important for grouping. For now only important property is Citizen since it's the only one that is used in queries.</summary>
+        </member>
+        <member name="T:Eco.Stats.IgnoreAggregateGroupingAttribute">
+            <summary>Marks that property is ignored for aggregation grouping. I.e. Count shouldn't be used in grouping, because it is aggregatable field.</summary>
+        </member>
+        <member name="T:Eco.Stats.SumInAggregateGroupingAttribute">
+            <summary>If property has this attribute then it won't be used as grouping key, but instead will aggregate sum of all values of the property.</summary>
+        </member>
+        <member name="T:Eco.Stats.PlotPositionKeyAttribute">
+            <summary>Marks that to generate grouping key the position should use converted to plots value. I.e. it will still group together actions that happened at (101,102) and (104,103) positions since they are happened at same plot. Value still be saved in world positions, i.e., after merging records, it will show 1 record: (2 actions at 101,102).</summary>
+        </member>
+        <member name="M:Eco.Stats.StatInfo.SetCalculatedProperties">
+            <summary>Sets calculated properties which may be evaluated from other properties. Used from constructor and <see cref="M:Eco.Stats.StatInfo.OnDeserialized"/> method.</summary>
+        </member>
+        <member name="T:Eco.Stats.StatInfoManager">
+            <summary> Maintains all the info about stats, and builds that info on init. </summary>
+        </member>
+        <member name="F:Eco.Stats.Stats.SumByCount">
+            <summary> Cached Expression for <see cref="M:Eco.Stats.Stats.CountStat(System.Type,System.Single,System.Double,System.Int32)"/>. </summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.Record(System.Int32,System.String,System.Single)">
+            <summary> Do a simple time/value record. </summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.CountStat(System.String,System.Single,System.Double,System.Int32)">
+            <summary> Returns count for <paramref name="stat"/>. For <see cref="T:Eco.Stats.ICountStat"/> it will use sum of value in Count property, otherwise it will return count of records. If you need info for several users you should avoid use it, use CountStatPerPlayer instead. </summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.CountStat(System.Type,System.Single,System.Double,System.Int32)">
+            <summary> Returns count for <paramref name="stat"/>. For <see cref="T:Eco.Stats.ICountStat"/> it will use sum of value in Count property, otherwise it will return count of records. If you need info for several users you should avoid use it, use CountStatPerPlayer instead. </summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.CountStat(LiteDB.ILiteCollection{LiteDB.BsonDocument},System.Single,System.Double,System.Int32)">
+            <summary>Returns count for stat. For <see cref="T:Eco.Stats.ICountStat"/> it will use sum of value in Count property, otherwise it will return count of records.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.CountStatPerPlayer(System.String,System.Single,System.Double)">
+            <summary> Returns a dictionary userId -> value of stat for all users existed. Usefull if you need data for every user, this will be much faster than run CountStat user by user. </summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.FirstBeforeQuery(System.Int32)">
+            <summary>Makes <see cref="T:LiteDB.Query"/> which returns <see cref="T:Eco.Stats.TimeValue"/> recorded before or at <paramref name="time"/>.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.QueryFirstBefore(System.String,System.Int32)">
+            <summary>Returns <see cref="T:Eco.Stats.TimeValue"/> recorded before or at <paramref name="time"/>.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.RecoverFromBackup">
+            <summary>Recovers database file from backup. If no valid backup exists then it uses empty database.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.CreateLiteDbService">
+            <summary>Creates <see cref="T:Eco.Stats.LiteDbService"/> for <see cref="P:Eco.Stats.Stats.DatabasePath"/>. May throw exception if DB corrupted and fails during health check.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.Collection(System.String)">
+            <summary>Returns Lite DB collection by long name, automatically resolving it to short name.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.Collection``1(System.String)">
+            <summary>Returns Lite DB collection by long name, automatically resolving it to short name.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.Collection(Eco.Stats.StatInfo)">
+            <summary>Returns Lite DB collection for <see cref="T:Eco.Stats.StatInfo"/>.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.Collection``1(Eco.Stats.StatInfo)">
+            <summary>Returns Lite DB collection for <see cref="T:Eco.Stats.StatInfo"/>.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.Find``1(System.String,LiteDB.Query)">
+            <summary>Finds records by <paramref name="query"/>.</summary>
+        </member>
+        <member name="M:Eco.Stats.Stats.FindOne``1(System.String,LiteDB.Query)">
+            <summary>Finds one (first) record by <paramref name="query"/>.</summary>
+        </member>
+        <member name="T:Eco.Stats.StatsAggregator">
+            <summary>
+            This class responsible for aggregating multiple similar stats into single record per hour when detailed time scale no more needed.
+            Maximum hours to preserve detailed information defined by <see cref="P:Eco.Stats.StatsConfig.KeepDetailsHours"/>.
+            This class should be initialize with call to <see cref="M:Eco.Stats.StatsAggregator.Initialize(System.Collections.Generic.IEnumerable{Eco.Stats.StatInfo})"/> with enumerable of <see cref="T:Eco.Stats.StatInfo"/> instances which used
+            to build aggregatable stats collection with <see cref="P:Eco.Stats.StatInfo.IsAggregatable"/> equal to true.
+            Once initialized this class may be used to aggregate all registered stats with call to <see cref="M:Eco.Stats.StatsAggregator.Aggregate(System.Double)"/> method.
+            Use of this class may help greatly reduce size of database and effectiveness of queries, because many stats like craft actions or pollution events
+            may create thousands of records within a hour at same position, for same item etc.
+            </summary>
+        </member>
+        <member name="M:Eco.Stats.StatsAggregator.Aggregate(System.Double)">
+            <summary>Aggregates stats into fewer records. Read more details in class summary.</summary>
+        </member>
+        <member name="M:Eco.Stats.StatsAggregator.MergeStats(System.Collections.Generic.IEnumerable{LiteDB.BsonDocument},System.Action{LiteDB.BsonDocument,LiteDB.BsonDocument},System.Collections.Generic.List{LiteDB.BsonDocument},System.Collections.Generic.HashSet{LiteDB.ObjectId})">
+            <summary>Merge stats into single record.</summary>
+        </member>
+        <member name="M:Eco.Stats.StatsAggregator.CreateAggregateFromFunc(System.Type)">
+            <summary>
+            Creates compiled aggregate action which aggregates values from aggregatable to aggregator. I.e. it may be sum of Count property.
+            All properties with <see cref="T:Eco.Stats.SumInAggregateGroupingAttribute"/> will be summed up.
+            </summary>
+        </member>
+        <member name="M:Eco.Stats.StatsAggregator.CreateGroupingComparer(System.Type,System.Boolean)">
+            <summary>Creates compiled function for <paramref name="statType"/> for all or only essential fields (specified by <paramref name="essentialOnly"/>).</summary>
+        </member>
+        <member name="M:Eco.Stats.StatsAggregator.GenerateHashFunction(System.Linq.Expressions.ParameterExpression,System.Reflection.PropertyInfo[])">
+            <summary>
+            Generates hash function for grouping equality comparer.
+            Result function looks like:
+            <code>
+            (document) => {
+                var hash = new HashCode();
+                hash.Add(document["prop"]);
+                hash.Add(document["prop2"]);
+                return hash.ToHashCode();
+            }
+            </code>
+            </summary>
+        </member>
+        <member name="M:Eco.Stats.StatsAggregator.IsGroupProperty(System.Reflection.PropertyInfo,System.Boolean)">
+            <summary>Checks if property is suitable for grouping</summary>
+        </member>
+        <member name="M:Eco.Stats.StatsAggregator.GroupingValue(System.Linq.Expressions.Expression,System.Reflection.PropertyInfo)">
+            <summary>Returns grouping value for property depending on property type.</summary>
+        </member>
+    </members>
+</doc>
