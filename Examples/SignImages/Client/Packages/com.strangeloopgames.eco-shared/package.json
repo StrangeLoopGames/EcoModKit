@@ -1,0 +1,11 @@
+{
+    "name": "com.strangeloopgames.eco-shared",
+    "displayName": "Eco.Shared",
+    "version": "0.0.0",
+    "unity": "2019.2",
+    "unityRelease": "0f1",
+    "dependencies": {
+    },
+    "description": "Eco shared libraries.",
+    "keywords": [ "eco", "shared", "strangeloopgames" ]
+}

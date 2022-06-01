@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 840912998
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: fontmod
+      Dependencies: {}
