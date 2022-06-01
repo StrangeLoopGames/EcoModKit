@@ -1,6 +1,13 @@
+<!-- Here we define the Eco item that will be used for our page's icon in the Ecopedia navigation bar -->
 <ecopedia icon="PaperItem">
   <summary>Welcome to our Eco Server!</summary>
-  <section type="banner" image="IllustrationSampleArt" />
+
+  <!-- The banner section type allows for the addition of images that were previously created inside the client AssetBundle project. 
+    These images will attempt to fill the full width of the Ecoepdia page so it is advised to use rectangle images that are longer then they are tall. -->
+  <section type="banner" image="EcoLogoSampleImage" />
+
+  <!-- In most cases your page content should be enclosed in the base section tag. This allows the page parser to properly lay out the content
+    you give it -->
   <section>
 1. Don't be an jerk.
 2. Don't game the game, IE: Use waterwheels without a watersource.
@@ -8,5 +15,10 @@
 3.1. Bridges can still float, but must have "support" columns for aesthetic purposes. 
 
 We hope you enjoy your stay!
+
+If you would like to stay up to date on our changes be sure to join our Discord!
   </section>
+  <!-- The button section type creates a clickable button that will open an external URL when clicked. Note: if the URL is not a domain
+    that Strange Loop Games has verified as trusted a warning dialog will be presented to the user instead of the normal "open website" dialog box -->
+  <section type="button" url="www.google.com">Click here to join!</section>
 </ecopedia>
