@@ -2,7 +2,7 @@ using System;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Eco.WebServer.Web.Controllers
+namespace Eco.Plugins.HelloWorld
 {
      /// <summary>
     /// Example Controller to extend the Eco WebServer with a custom Endpoint.
@@ -12,7 +12,7 @@ namespace Eco.WebServer.Web.Controllers
     public class HelloWorldController : Controller
     {
         [HttpGet("")]
-        public String getAll()
+        public String Get()
         {
             return "Hello World!";
         }
