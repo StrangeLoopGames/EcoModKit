@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:ue="UnityEditor.UIElements" xmlns:ce="CustomElements"
+  xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+  xsi:schemaLocation="
+    UnityEngine.UIElements ../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+    UnityEditor.UIElements ../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+    UnityEditor.PackageManager.UI ../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd">
+  <ui:ListView name="BlockList" />
+  <ui:VisualElement>
+    <ui:Button name="NewBlock" text="New Block" />
+    <ui:Button name="RemoveBlock" text="Remove" />
+    <ui:Button name="CreateLodGroups" text="Create Lod Groups" />
+    <ui:Button name="Validate" text="Validate assets" />
+    <ui:Button name="ForceSave" text="Force Save" />
+  </ui:VisualElement>
+  <ui:VisualElement class="PropertyContainer">
+      <ui:TextField name="SetAllAudioField" class="PropertyTextField"/>
+      <ui:Button name="SetAllAudio" text="Set All AudioCategory" />
+  </ui:VisualElement>
+  <ui:VisualElement name="EditorContainer">
+    <ce:BlockEditorElement name="BlockEditor" />
+  </ui:VisualElement>
+  <ui:VisualElement name="MaterialContainer">
+  </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990562a2c7a14518b8146acf97468d94, type: 3}
+  m_Name: Animset_Corn_FPV
+  m_EditorClassIdentifier: 
+  OverrideStates:
+  - State: FPV_Eat_Idle_Start
+    Clip: {fileID: 1827226128182048838, guid: 6df688633a9ed064cbcda349a9ce3c7f, type: 3}
+  - State: FPV_Eat_Idle
+    Clip: {fileID: 1827226128182048838, guid: 00f9e3a8317ce9c4aa4cf3dcf696b270, type: 3}
+  - State: FPV_Eat_Idle_Exit
+    Clip: {fileID: 1827226128182048838, guid: 8bc53dd43d182c7479ac8c80ea567d9c, type: 3}
+  - State: FPV_Eat_Loop_Start
+    Clip: {fileID: 1827226128182048838, guid: 542cd9df3f7e6e844b8fda4c31f4a4bc, type: 3}
+  - State: FPV_Eat_Loop
+    Clip: {fileID: 1827226128182048838, guid: 9555d94e04eb26646abaf982096893da, type: 3}
+  - State: FPV_Eat_Loop_Exit
+    Clip: {fileID: 1827226128182048838, guid: 622953d5e2eb6cf40a4010790a79002e, type: 3}
