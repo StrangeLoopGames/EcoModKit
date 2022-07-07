@@ -10,6 +10,6 @@ Current examples:
 * [EchoCommand](Examples/EchoCommand) - A chat command that echos back the message you give it
 * [EcopediaPage](Examples/EcopediaPage) - An Ecopedia Page that adds a rules page for servers
 * [Flag](Examples/Flag) - A flag object with animation that can be turned of and off
-* [CornOnTheCob](Examples/CornOnThecob) - A food mod which adds Corn on the cob.
+* [CornOnTheCob](Examples/CornOnTheCob) - A food mod which adds Corn on the cob as a new food.
 
 If you have a suggestion for a new example mod you would like to see, or for some new functionality in the modkit for something you're trying to do, head over to [issues](https://github.com/StrangeLoopGames/EcoModKit/issues) and let us know!
