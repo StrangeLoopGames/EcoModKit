@@ -1,3 +1,0 @@
-// Comments from Mike
-Those needed as placeholder for not-tied to actual food names, 
-that will be overwridden in animsets for every food item

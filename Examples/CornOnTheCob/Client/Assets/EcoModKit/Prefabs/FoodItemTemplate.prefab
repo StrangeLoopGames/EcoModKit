@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 7121265434307086754}
   - component: {fileID: 3726399404272822437}
   m_Layer: 0
-  m_Name: Food_FPV
+  m_Name: Food_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
