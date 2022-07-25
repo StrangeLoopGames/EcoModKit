@@ -1,3 +1,4 @@
-### Guide on how CornOnTheCob food mod example was made can be found [HERE](https://wiki.play.eco/en/Corn-on-the-cob_example_mod#Client) 
+### Corn on the cob example mod  
  
-### Server side file + resulting bundle after building example modkit can be found [HERE](https://drive.google.com/drive/folders/1coxU8BGCyjKS52eOphCIMWX7ULiCEgac?usp=sharing)
+Here you can find the files to the corn on the cob example food mod.
+It shows how it was declared in the server side and how it was created and built in the client side. It uses both custom FPV hand animations and already predefined animations within Eco.
