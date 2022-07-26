@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c610a9bd2094401191ea92d523212476
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BiteSequence: {fileID: 11400000, guid: 7979c1d9715463a439d3b6a47e2463de, type: 2}
+  - PlateTemplate: {fileID: 928903550708524275, guid: 034e1f394bba06a4d9396e184e2d2303,
+      type: 3}
+  - UtensilTemplate: {fileID: 2352996416451123129, guid: 7903338e033ab85408cd4523806250cb,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
