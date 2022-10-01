@@ -92,7 +92,7 @@ namespace Eco.Example.DonationBox
 
         float donationAmount;
         [SyncToView, Autogen, AutoRPC, Serialized] 
-        public float donationAmount
+        public float DonationAmount
         {
             get => donationAmount;
             set
