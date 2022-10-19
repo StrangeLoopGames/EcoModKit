@@ -39,4 +39,5 @@ public class EmbeddedLocStringParameter
 {
     public string stringParameter;  // string to look for by (stops at first). e.g.: text = '12 plots. 300 sq m.' we can replace "12" or "300"
     public bool   localize;         // localize parameter or not
+    public static implicit operator EmbeddedLocStringParameter(LocString val) => new EmbeddedLocStringParameter { stringParameter = val.NotTranslated, localize = true };
 }

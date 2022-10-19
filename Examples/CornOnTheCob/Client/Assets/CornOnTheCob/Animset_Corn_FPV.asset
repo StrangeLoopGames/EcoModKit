@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Animset_Corn_FPV
   m_EditorClassIdentifier: 
   OverrideStates:
-  - State: FPV_Eat_Idle_Start
+  - State: FPV_Hands_Pre_Idle
     Clip: {fileID: 1827226128182048838, guid: d1350fdb5eadeb54f96f262fbeef335c, type: 3}
-  - State: FPV_Eat_Idle
+  - State: FPV_Hands_Idle
     Clip: {fileID: 1827226128182048838, guid: 128cb027343180647a9fb4a8726dca5e, type: 3}
   - State: FPV_Eat_Idle_Exit
     Clip: {fileID: 1827226128182048838, guid: 611a5569028a9b246b3b037f31f20c2d, type: 3}
@@ -25,3 +25,5 @@ MonoBehaviour:
     Clip: {fileID: 1827226128182048838, guid: 3b74130b2cda65f47b6475804a349830, type: 3}
   - State: FPV_Eat_Loop_Exit
     Clip: {fileID: 1827226128182048838, guid: 73e54514cde8c2f429f16dc79e4edcc4, type: 3}
+  - State: FPV_Eat_Gulp
+    Clip: {fileID: 1827226128182048838, guid: 1c5491163e3436443a5b72597dcacebd, type: 3}

@@ -5,10 +5,10 @@ using Quaternion = UnityEngine.Quaternion;
 ///<summary> Handles attaching parts to a players avatar </summary>
 public partial class AvatarAttachedPart : AvatarPart
 {
-    public string AttachPointName;                            // Name of object to attach tool to
-    public bool useCustomOffsets = false;                     // Does this tool need additional offset to fit on the avatar
-    public UnityEngine.Vector3 positionOffset;                // Position offset relative to parent
-    
-    [QuaternionToEuler]
-    public Quaternion rotationOffset;                        // Rotation is displayed as eulers in inspector 
+    [Space] 
+    [Header("Attachment Point Settings")]
+    [Tooltip("Name of GameObject on avatar to attach to. Eg. AttachTool_Hammer")]                                               public string AttachPointName;
+    [Tooltip("Do we need custom offsets to get it to fit on the avatar?")]                                                      public bool useCustomOffsets = false;
+    [Tooltip("Adjusting offsets is easiest by modifying in play mode and then copying values in here")]                         public UnityEngine.Vector3 positionOffset;                
+    [Tooltip("Adjusting offsets is easiest by modifying in play mode and then copying values in here")]     [QuaternionToEuler] public Quaternion rotationOffset;                        // Rotation is displayed as eulers in inspector 
 }

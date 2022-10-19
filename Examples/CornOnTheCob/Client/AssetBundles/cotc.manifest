@@ -1,0 +1,75 @@
+ManifestFileVersion: 0
+CRC: 162123569
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 465f373388c7ee0c9d0282981f8822e7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0f369587a402345c3fe244e098ef50b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+- Class: 104
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 233f938c05240c74a80c04755640a5df, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9368f86d56501c44287e09331abcf725, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ae588f238bf6d974994309a726c379a6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c610a9bd2094401191ea92d523212476, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 990562a2c7a14518b8146acf97468d94, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e1375dc37b538ae47b0833f4a19faeba, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 69929c77065b4e509a7ca583ab96a7a5, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 157
+  Script: {instanceID: 0}
+- Class: 196
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Scenes/SampleScene.unity
+Dependencies: []

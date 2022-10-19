@@ -2,6 +2,7 @@
     "name": "Eco.Client",
     "rootNamespace": "",
     "references": [
+        "Coffee.SoftMaskForUGUI",
         "Unity.TextMeshPro",
         "ThirdParty",
         "InputUser",

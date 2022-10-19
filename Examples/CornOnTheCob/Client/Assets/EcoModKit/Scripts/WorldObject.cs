@@ -82,5 +82,6 @@ public partial class WorldObject : SubscribableBehavior
 
     #region Interactable
     public bool interactable = true;
+    protected float interactionBlockedUntilTime;    // no interection timer
     #endregion
 }

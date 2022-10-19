@@ -17,4 +17,5 @@ public enum PredefinedFoodAnimations
     Eat_Sushi,
     Eat_TallFood,
     Eat_TwoHands,
+    Eat_OneShotSeed,
 }
