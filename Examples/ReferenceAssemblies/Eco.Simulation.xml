@@ -1,0 +1,761 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eco.Simulation</name>
+    </assembly>
+    <members>
+        <member name="M:Eco.Simulation.Agents.AI.AIUtil.FindTargetSwimPositions(Eco.Shared.Math.Vector3,System.Single,System.Single,Eco.Shared.Math.Vector2,System.Single,System.Single,System.Int32,System.Boolean)">
+            <summary>Finds potential target swim positions. Makes up to <paramref name="tryCount"/> tries.</summary>
+        </member>
+        <member name="T:Eco.Simulation.Agents.AI.BehaviorComplex`1">
+            <summary>This is how to implement behaviors that have a real 'Running' status through enumerators.</summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.AI.BehaviorDebug.SimulationTickDone">
+            <summary>Should be executed when Simulation completes tick. Animal debug data may be updated from external sources, so <see cref="M:Eco.Simulation.Agents.AI.BehaviorDebug.TickDone(Eco.Simulation.Agents.AI.Behavior{Eco.Simulation.Agents.Animal},Eco.Simulation.Agents.Animal)"/> isn't enough.</summary>
+        </member>
+        <member name="T:Eco.Simulation.Agents.AI.BehaviorBasic`1">
+            <summary> Leaf-node behavior that runs a given function. </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Eco.Simulation.Agents.AI.BehaviorTree`1">
+            <summary> A behavior that runs through execution of a list of children. </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Eco.Simulation.Agents.AI.BehaviorSelector`1">
+            <summary> Executes children until one succeeds. Only fails if all children fail. Returns running if any child is running.</summary>
+        </member>
+        <member name="T:Eco.Simulation.Agents.AI.BehaviorRandom`1">
+            <summary> Executes a random child under us by weight. Returns running if the child is running.</summary>
+        </member>
+        <member name="T:Eco.Simulation.Agents.AI.BehaviorSequence`1">
+            <summary> Executes children until one fails. Only succeeds if all children succeed. Returns running if any child is running. </summary>
+        </member>
+        <member name="T:Eco.Simulation.Agents.AI.BehaviorConditional`1">
+            <summary> Executes a child behavior based on a condition. </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Eco.Simulation.Agents.AI.BehaviorSuccess`1">
+            <summary> Executes an action then just returns success.</summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.AI.Brain.TryUpdatePosition(Eco.Simulation.Agents.Animal)">
+            <summary> Try to set new valid position or kill animal on bad location </summary>
+            //ANIMAL TODO THIS IS FUCKED CODE  ANIMALTODO
+        </member>
+        <member name="T:Eco.Simulation.Agents.AI.Brain`1">
+            <summary>Generic brain with behaviors specific to each species.</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Eco.Simulation.Agents.AI.GridUtils.DrawLine(Eco.Shared.Math.Vector3,Eco.Shared.Math.Vector3)">
+            <summary> Fast Voxel Traversal Algorithm (Based on Bresenham's line algorithm). Uses trigonometry in comparing to grid traversal algorithm. http://www.cse.yorku.ca/~amana/research/grid.pdf </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.AI.GridUtils.GridTraverse(Eco.Shared.Math.Vector2,Eco.Shared.Math.Vector2,System.Func{Eco.Shared.Math.Vector2i,System.Boolean})">
+            <summary> Grid traversal algorithm based on bresenham's algorithm. Iterates through all 2d cells along a line. </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.AI.GridUtils.BruteForceLine(Eco.Shared.Math.Vector2,Eco.Shared.Math.Vector2,System.Single)">
+            <summary> Slow grid-traverse algorithm for finding path from start to end point </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.SetRoute(Eco.Shared.Math.Route,Eco.Shared.States.AnimalState,System.Nullable{Eco.Shared.Math.Vector3i})">
+            <summary>Set the route of the animal, making sure to change the state and update the next tick based on the distance and speed. Returns needed time to finish the path </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.GetObservedLevel">
+            <summary> Calculates animal observer level using <see cref="M:Eco.Simulation.Agents.ObserverDetector.ObservationLevel(Eco.Shared.Math.Vector3,System.Single)"/> function. </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.TryDamage(Eco.Shared.Networking.INetObject,System.Single)">
+            <summary> Tries to make damage to animal. Returns <c>false</c> if animal can't take damage (already dead). </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.Damage(System.Single)">
+            <summary> Apply some damage to the animal - if it dies, return true. </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.ForceTick">
+            <summary>Forces <see cref="P:Eco.Simulation.Agents.Animal.NextTick"/>, usually as reaction on an event. Only updates if <see cref="P:Eco.Simulation.Agents.Animal.NextTick"/> planned for latter time. Otherwise because ticks processed by queue by updating time it may be moved latter in processing queue.</summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.SetFleePositionAndDuration(Eco.Shared.Math.Vector3,System.Double)">
+            <summary>Sets flee position and duration which should initiate actual flee behavior.</summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.FindFreeSpace(Eco.Shared.Math.Vector3,System.Boolean@)">
+            <summary> The function is called when the animals is not moving and someone is changing blocks around (as example, putting a block inside the animal)=
+            For different animals we could define different free space around - that is, for swimming animals we can't allow being on top of the water surface as they should die,
+            Land animals could be pushed on top of a block.
+            It returns <c>true</c> in <paramref name="habitable"/> if new block is habitable, otherwise it returns <c>false</c>. I.e. if fish is non in underwater block and won't survive.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.Stop">
+            <summary>
+            Stops animal at current position. If current position is invalid then it tries to find free habitable space.
+            If it can't find habitable space then it changes animal state to dead.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.ClearRoute">
+            <summary> Make full stop for an animal and clear route</summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.ObstacleAvoidance(Eco.Shared.Math.Vector3,System.Boolean)">
+            <summary> Try avoid dynamic obstacles in front of us. Forced flag allows to recalculate path even if animal already fleeing from some position. </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.GetFleeDirection">
+            <summary>Returns direction from <see cref="F:Eco.Simulation.Agents.Animal.FleePosition"/> to current animal position.</summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.AlertNearbyAnimals(Eco.Shared.Math.Vector3,System.Single,System.Single)">
+            <summary> Apply special cases for running from a dangerous place </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.Animal.SetController(Eco.Shared.Networking.INetObjectViewer,Eco.Shared.Networking.INetObjectViewer)">
+            <summary>Thread safe controller setter which checks for old viewer before replace with new viewer.</summary>
+        </member>
+        <member name="T:Eco.Simulation.Agents.ICanTakeDamage">
+            <summary> Interface to be implemented by objects which can take damage. It then may be used in simulation (in example for attacking animals). </summary>
+        </member>
+        <member name="M:Eco.Simulation.Agents.ICanTakeDamage.TryDamage(Eco.Shared.Networking.INetObject,System.Single)">
+            <summary> Tries to make <paramref name="damage"/>. Returns <c>false</c> if failed to make any damage. </summary>
+        </member>
+        <member name="P:Eco.Simulation.Agents.Organism.BornTime">
+            <summary> Born time in <see cref="P:Eco.Simulation.Time.WorldTime.Seconds"/>. </summary>
+        </member>
+        <member name="P:Eco.Simulation.Agents.Organism.WorldHomePos">
+            <summary>Home position is a position where it was spawned by simulation, it may be different from Position if Organism moved</summary>
+        </member>
+        <member name="P:Eco.Simulation.Agents.Tree.WorldHomePos">
+            <inheritdoc cref="P:Eco.Simulation.Agents.Organism.WorldHomePos"/>
+        </member>
+        <member name="M:Eco.Simulation.AnimalSim.SpawnAnimal(Eco.Simulation.Types.AnimalSpecies,Eco.Shared.Math.Vector3,System.Action{Eco.Simulation.Agents.Animal})">
+            <summary>
+            Spawn alive animal from <paramref name="species"/> at <paramref name="pos"/>.
+            Optionally <paramref name="onCreate"/> action may be provided which will be called **before** animal registered as tickable.
+            It ensures animal fully initialized before first tick.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.AnimalSim.SpawnCorpse(Eco.Simulation.Types.AnimalSpecies,Eco.Shared.Math.Vector3)">
+            <summary> Spawn animal's corpse from <paramref name="species"/> at <paramref name="pos"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.AnimalSim.SpawnAnimalInternal(Eco.Simulation.Types.AnimalSpecies,Eco.Shared.Math.Vector3,System.Action{Eco.Simulation.Agents.Animal},System.Boolean)">
+            <summary> Spawn animal corpse from <paramref name="species"/> at <paramref name="pos"/> either alive or it's <paramref name="corpse"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.ClimateState.PerDay(System.Single)">
+            <summary> Calculates per day PPM for <paramref name="lastTickValue"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.ClimateState.PerHour(System.Single)">
+            <summary> Calculates per hour PPM for <paramref name="lastTickValue"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.ClimateState.AppendCO2Emission(Eco.Shared.Localization.LocStringBuilder,Eco.Shared.Localization.LocString,System.Single,System.Single)">
+            <summary> Appends line for CO2 emission. </summary>
+        </member>
+        <member name="M:Eco.Simulation.ClimateState.AppendTo(Eco.Shared.Localization.LocStringBuilder)">
+            <summary> Appends state to <see cref="T:Eco.Shared.Localization.LocStringBuilder"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.ClimateState.ToLocString">
+            <summary> Returns <see cref="T:Eco.Shared.Localization.LocString"/> representation of Climate State. </summary>
+        </member>
+        <member name="P:Eco.Simulation.ClimateSim.AirPollution">
+            <summary> Accumulates air pollution in tons. </summary>
+        </member>
+        <member name="E:Eco.Simulation.ClimateSim.ClimateStateChanged">
+            <summary> Can subscribe to this event for climate state updates. </summary>
+        </member>
+        <member name="M:Eco.Simulation.ClimateSim.Pull">
+            <summary> Pulls data at beginning of tick for more precise results. </summary>
+        </member>
+        <member name="M:Eco.Simulation.ClimateSim.AddAirPollutionTons(Eco.Shared.Math.WorldPosition3i,System.Single)">
+            <summary> Adds <paramref name="tons"/> of air pollution at <paramref name="pos"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.EcoSim.WithTempEcoSim(Eco.Simulation.Settings.EcoDef,System.Action)">
+            <summary>
+            Creates temporary EcoSim singleton only with configuration. Intention is primary for unit testing.
+            </summary>
+            <param name="ecoDef">EcoDef config.</param>
+            <param name="action">action to be executed with TempEcoSim.</param>
+        </member>
+        <member name="T:Eco.Simulation.ExternalInputs.IDynamicObstacle">
+            <summary> Interface represents net objects that could change their position and should be avoided (e.g with pathfinding)  </summary>
+        </member>
+        <member name="P:Eco.Simulation.ExternalInputs.MovementTracker.LandAwareAnimals">
+            <summary>Returns only landing animals or swimming animals which may swim near coast.</summary>
+        </member>
+        <member name="M:Eco.Simulation.ExternalInputs.MovementTracker.ReactOnDynamicObstacles">
+            <summary> Realtime reacting on players around for moving animals, detects players in front of an animal and changes its behaving </summary>
+        </member>
+        <member name="M:Eco.Simulation.ExternalInputs.MovementTracker.ReactOnWorldChanges">
+            <summary> Force retick animal's route if there's any preventions for walking through their nearest route.
+            example of preventions: someone digs a huge hole from which the animal won't be able to climb easily
+            or there's a huge wall/house/tree/etc. appears in an animal's route </summary>
+        </member>
+        <member name="M:Eco.Simulation.ExternalInputs.MovementTracker.UpdateQuadTreeWithPosition">
+            <summary> Update animals location in quad tree depending on their current movement position </summary>
+        </member>
+        <member name="M:Eco.Simulation.ExternalInputs.MovementTracker.CheckDangerousPlaces">
+            <summary> Perform check and reaction on world objects around (torch stands, vehicles, elevators etc.) </summary>
+        </member>
+        <member name="M:Eco.Simulation.ExternalInputs.MovementTracker.CheckObjectsAround(Eco.Shared.Math.WorldPosition3i,System.Single)">
+            <summary>
+            Checks if some dynamic obstacle is around requested position. Should be called once on route building. Do not use it for dynamic
+            reaction for obstacles, that is done on client.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.PlantSim.PlantsInArea(Eco.Shared.Math.WorldArea)">
+            <summary>Returns all plants in <paramref name="area"/>.</summary>
+        </member>
+        <member name="M:Eco.Simulation.PlantSim.PlantsInWrappedArea(Eco.Shared.Math.WorldArea)">
+            <summary>Returns all plants in <paramref name="area"/>. The area is pre-wrapped and won't cross world bounds.</summary>
+        </member>
+        <member name="M:Eco.Simulation.PlantSim.KillPlant(Eco.Simulation.Agents.Plant,Eco.Simulation.DeathType,System.Boolean)">
+            <summary> Turn the plant into a gross dead version. Leave the block and the plant entry.</summary>
+        </member>
+        <member name="M:Eco.Simulation.PlantSim.TotalFertility(Eco.Shared.Math.WorldArea,System.Boolean)">
+            <summary> Calculates total fertility over <paramref name="worldArea"/>. Either for ground or <paramref name="underwater"/> blocks. </summary>
+        </member>
+        <member name="M:Eco.Simulation.PlantSim.PlantsInBounds(Eco.Shared.Math.Vector2,Eco.Shared.Math.Vector2)">
+            <summary>Enumerates plants in bounds specified by center point and extents.</summary>
+        </member>
+        <member name="T:Eco.Simulation.RouteProbing.AStarSearchCustom">
+            <summary>
+            Variation with ability to specify custom functionality (using a separate class so AStarSearch can be tuned for maximum performance).
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.Flooding.FloodFill(Eco.Shared.Math.WorldPosition3i,System.Func{Eco.Shared.Math.WorldPosition3i,System.Boolean},System.Action{Eco.Shared.Math.WorldPosition3i})">
+            <summary> Traverse all directions from requested start pos and apply visit function to each valid pos pos, determined by checkVisited func </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.Flooding.TryMove(System.Func{Eco.Shared.Math.WorldPosition3i,System.Boolean},Eco.Shared.Math.WorldPosition3i,Eco.Shared.Math.Vector3i)">
+            <summary> Tries to visit target direction from target position. Applies custom visit check function </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCache`1.IsWalkable(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Check for Ground pos walkable state </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCache`1.TryGetWalkable(Eco.Shared.Math.WorldPosition3i,`0@)">
+            <summary> Returns first walkable position on the grid </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCache`1.Neighbors(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Gets closest walkable neighbors for target position. Note: Use RouteCacheData.Neighbors instead (cause this one has no vertical checks) </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCache`1.GetClosestWalkable(Eco.Shared.Math.WorldPosition3i,System.Single)">
+            <summary> Gets closest walkable neighbor for target position in some defined range Note: Use RouteCacheData.Neighbors instead (cause this one has no vertical checks) </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCache`1.GetAllWalkablesInColumn(Eco.Shared.Math.WorldPosition3i,System.Single)">
+            <summary> Same as GetClosestWalkable but can be used for bigger search ranges and it returns values for caching </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.BuildNeighborCostLookup">
+            <summary>  Cached neighbor costs for adjacent and diagonal moves (note: these are decent variables to tweak to tune pathing). One time call. </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.SetRegionID(Eco.Shared.Math.WorldPosition3i,System.Int16)">
+            <summary>  Try to assign region id to target position </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.SetRegionIDNoUpdate(Eco.Shared.Math.WorldPosition3i,System.Int16)">
+            <summary>  Updates region data silently </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.CalculateMovementCost(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Get movement cost for target positions, depending on block contents </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.RemoveAndUnlink(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Removes position from cached route data and updated links for neighbors </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.PackConnectionsFromWorld(Eco.Shared.Math.WorldPosition3i)">
+            <summary>  Packs all possible connections for requested position to int bit </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.UpdateConnectionsFromWorld(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Forces to update cached data for requested position (directions data and movement costs) </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.Neighbors(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Shortcut to get all neighbours data for requested pos, see AllNeighbors for ref </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.AllNeighbors(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Get all neighbours data for requested position </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.AdjacentNeighborInfo(Eco.Shared.Math.WorldPosition3i,System.Int32,System.Int32,System.Single)">
+            <summary> Builds NeighborInfo based on requested position and neighbor data for requested diagonal and yData </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.NeighborsIncludeWater(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Get all neighbours data for requested position, including water blocks checks </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.GetBitsForDirections(System.Int16,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary> Handler to convert packed data to direction bits </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.IsFlatGround">
+            <summary> Cached local check for flat ground in current position. Should use this if possible. </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteCacheData.IsFlatGround(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Static check for ground flatness, reuses cached one, but tries to get data from global grid. </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.QueueBlockUpdate(Eco.Shared.Math.Vector3i)">
+            <summary> Adds requested position to block update queue for future processing </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.QueueRegionForUpdate(Eco.Simulation.RouteProbing.AStarSearch)">
+            <summary> Adds requested A* region update queue for future processing </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.SubscribeBlockUpdateEvents">
+            <summary> Subscribes to block update events to keep route related data up to date  </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.Clear">
+            <summary> Clears all variables, unsubscribes from updates and marks itself for reset </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.NearestWalkablePathPosAbove(Eco.Shared.Math.WorldPosition3i,System.Int32)">
+            <summary> Gets nearest walkable position on requested position (a place where plants usually grow, etc, so its NearestWalkableGroundPos with offset) </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.NearestWalkableGroundPos(Eco.Shared.Math.WorldPosition3i,System.Int32)">
+            <summary>  Gets nearest walkable position on actual ground block </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.AllWalkablesY(Eco.Shared.Math.WorldPosition3i,System.Int32,System.Int16)">
+            <summary> Builds and returns list of all possible walkable positions from requested one in one axis</summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.AllWalkablesYTwoDir(Eco.Shared.Math.Vector3@,Eco.Shared.Math.Vector2,Eco.Shared.Math.Vector2,Eco.Shared.Math.Vector3,System.Single,System.Single,System.Int16)">
+            <summary> Find a random point along the line of motion in two directions (target/opposite) </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.NearestWalkableXYZ(Eco.Shared.Math.WorldPosition3i,System.Int32,System.Int16)">
+            <summary>  Returns nearest walkable position, based on a search of each axis </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.IsInWalkableRegionPathPos(Eco.Shared.Math.Vector3i)">
+            <summary> Query a space directly above ground for being in a walkable region. </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.SetWalkable(Eco.Shared.Math.Vector3i)">
+            <summary> Can add any position to walkables, will assign/create regions for it if needed </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.RemoveWalkable(Eco.Shared.Math.Vector3i)">
+            <summary> Removes position from walkables, will update all adjacent links if any </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.InitRouteCache(System.Boolean)">
+            <summary> Initializes data for regions and creates them, based on init type (quick or not) </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.WorldBlockIsWalkable(Eco.Shared.Math.Vector3i)">
+            <summary> Check if block position is walkable </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.IsPassable(Eco.Shared.Math.Vector3i)">
+            <summary>Checks if <paramref name="position"/> passable. It is passable if block above isn't solid, occupied or underwater and another block above the above block isn't solid.</summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.UpdateBlocks">
+            <summary> Executes update check for each block, that was queued for update </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.UpdateRegions">
+            <summary> Executes update check for each region, that was queued for update </summary>
+        </member>
+        <member name="M:Eco.Simulation.RouteProbing.RouteManager.GetDisplayText">
+            <summary> Gets state info for plugin manager </summary>
+        </member>
+        <member name="M:Eco.Simulation.Settings.ClimateSettings.OnParamsUpdated">
+            <summary> This method called when config changed and recalculates dynamic values. </summary>
+        </member>
+        <member name="M:Eco.Simulation.Types.AnimalSpecies.GetTraversalData(System.Boolean)">
+            <summary> Get speeds in current traversal to apply it on an animal </summary>
+        </member>
+        <member name="M:Eco.Simulation.Types.PlantSpecies.ResourceConstraint.Habitability(System.Single)">
+            <summary> Calculates habitability for this resource constraint for given <paramref name="resourceConcentration"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.Types.PlantSpecies.CapacityConstraint.Habitability(System.Single)">
+            <summary> Calculates habitability for given <paramref name="capacity"/>. It is based on <see cref="P:Eco.Simulation.Types.PlantSpecies.CapacityConstraint.ConsumedCapacityPerPop"/>. <paramref name="capacity"/> is density per voxel column. </summary>
+        </member>
+        <member name="M:Eco.Simulation.Types.PlantSpecies.CapacityConstraint.GrowthRate(System.Single,System.Single)">
+            <summary> Calculates growth rate in range [0; 1]. It then can be used in formula N + N * growthRate to get new population size. </summary>
+        </member>
+        <member name="M:Eco.Simulation.Types.PlantSpecies.GetMostCrowdedSpaceUsed(Eco.Simulation.WorldLayers.Layers.LayerPosition)">
+            <summary> Calculate how much space crowded in an area with the plant based on habitability modifier. </summary>
+        </member>
+        <member name="M:Eco.Simulation.Types.PlantSpecies.IsGoodPlacement(Eco.Shared.Math.WrappedWorldPosition3i)">
+            <summary>Checks if <paramref name="placementPosition"/> is good for that plant species.</summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.AccumulatingPuller">
+            <summary>
+            A puller that accumulates layer modifications that occur between worldlayer ticks, typically as a result of WorldObject and player actions.
+            Use it as a proxy for writing directly to a layer.
+            </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.Components.BiomeComponent">
+            <summary>
+            Used by <see cref="T:Eco.Simulation.WorldLayers.Pushers.BiomePusher"/> to set terrain blocks.
+            </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.DebrisCache">
+            <summary> Caches information about tree debris presence in the world. Used in plant and trampling simulation. </summary>
+        </member>
+        <member name="P:Eco.Simulation.WorldLayers.DebrisCache.Cache">
+            <summary> Cache contains mapping between X,Z and Y of tree debris. It only supports one tree debris in a column which should be fine in 99.999% cases and we don't need 100% precision here. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.DebrisCache.Flush">
+            <summary> Flushes queued block changes and actualizes cache state. </summary>
+        </member>
+        <member name="F:Eco.Simulation.WorldLayers.Editor.WorldLayerButtons.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Editor.WorldLayerButtons.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Editor.WorldLayerButtons.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.History.GifEncoder">
+            <summary>
+            Encodes multiple images as an animated gif to a stream. <br />
+            ALWAYS ALWAYS ALWAYS wire this up   in a using block <br />
+            Disposing the encoder will complete the file. <br />
+            Uses default .net GIF encoding and adds animation headers.
+            </summary>
+            Modified gifencoder from https://github.com/DataDink/Bumpkit
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.History.GifEncoder.#ctor(System.IO.Stream,System.Nullable{System.Int32})">
+            Encodes multiple images as an animated gif to a stream.
+            ALWAYS ALWAYS ALWAYS wire this in a using block
+            Disposing the encoder will complete the file.
+            Uses default .net GIF encoding and adds animation headers.
+            <param name="stream">The stream that will be written to.</param>
+            <param name="repeatCount">Sets the repeat count for this gif or null to use default.</param>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.History.GifEncoder.AddFrame(System.Byte[],System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Nullable{System.TimeSpan})">
+            <summary>
+            Adds a frame to this animation.
+            </summary>
+            <param name="frame">The frame byte array to add.</param>
+            <param name="colorTable">The color table byte array.</param>
+            <param name="width">Sets the width for this gif or null to use the first frame's width.</param>
+            <param name="height">Sets the height for this gif or null to use the first frame's height.</param>
+            <param name="x">The positioning x offset this image should be displayed at.</param>
+            <param name="y">The positioning y offset this image should be displayed at.</param>
+            <param name="frameDelay">The frame delay or null for default.</param>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.IPostWorldGenWorldLayerPusher">
+            <summary>
+            Interface for pushers who aware about post world gen (after all interactions initialized, but before Tick).
+            If pusher may modify layer values (like Plant Spawner which checks actually available spawn blocks and also ensures to not spawn plants over capacity) then you may need
+            to have this callback so interaction during Tick phase will use adjusted values (i.e. for consumed capacity calculation).
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.IPostWorldGenWorldLayerPusher.PostWorldGenPush(Eco.Shared.Math.WorldArea,System.Single[],Eco.Simulation.WorldLayers.WorldLayerNeighborInfo[])">
+            <summary> Method which invoked after all interaction initialized, but before <see cref="M:Eco.Simulation.WorldLayers.NewWorldLayerSync.Tick"/> on PostWorldGen stage. </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.IStartupWorldLayerPuller">
+            <summary> Interface extending <see cref="T:Eco.Simulation.WorldLayers.IWorldLayerPuller"/> with ApplyStartupValue which pulls startup value based on current world state. </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.LayerInteractions.PlantInteraction`1">
+            <summary> Base class for Plant interactions. Contains common methods. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.LayerInteractions.PlantInteraction`1.ApplyResourceConstraints(System.Single@,System.String@,System.Single[])">
+            <summary> Applies resource limit to current limit modifier. </summary>
+            <param name="habitability">Current limit modifier [0; 1]. May be reduced if restricted by resources.</param>
+            <param name="layerName">Restricting layer name if any layer reduced limit.</param>
+            <param name="dependencyValues">Dependency values for calculations.</param>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.LayerInteractions.PlantInteraction`1.ApplyCapacityConstraints(System.Single@,System.String@,System.Single[])">
+            <summary>
+            Applies capacity constraints to <paramref name="availablePopulationExtension"/>.
+            It uses two layers {Plant}Capacity and {Plant}ConsumedCapacity for calculation.
+            For every plant there may be few capacity constraints like required fertile ground per plant and required canopy space per plant.
+            Then it calculates how plants may be planted in available capacity (total - consumed) and reduces <paramref name="availablePopulationExtension"/> if it is greater than the value.
+            After applying these constraints it ensures that layer value is capped by all capacities (can't be increased more than for updated <paramref name="availablePopulationExtension"/>).
+            </summary>
+            <param name="availablePopulationExtension">Currently available population extension.</param>
+            <param name="layerName">Restricting layer name if any layer reduced limit.</param>
+            <param name="dependencyValues">Dependency values for calculations.</param>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.LayerInteractions.PlantPopulationConsumedCapacityInteraction">
+            <summary>
+            This interaction used by plant species to update consumed capacity in capacity layers. It inherits from <see cref="T:Eco.Simulation.WorldLayers.LayerInteractions.ProportionalInteraction"/>,
+            but ensures only fully spawned plants consumed capacity to avoid situation with overcrowding and non-spawning from fractional plants.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.LayerInteractions.PlantPopulationConsumedCapacityInteraction.GetValue(System.Single[])">
+            <summary> Trim to integer number of plants to avoid consume capacity for fractional plants which may prevent plants from grow and spawn. </summary>
+        </member>
+        <member name="P:Eco.Simulation.WorldLayers.LayerInteractions.ProducerSpeciesGrowth.RequiresNeighborhood">
+            <inheritdoc cref="P:Eco.Simulation.WorldLayers.WorldLayerInteraction`1.RequiresNeighborhood"/>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.LayerInteractions.ProducerSpeciesGrowth.ConstrainedGrowthValue(System.Single,System.Single[])">
+            <summary> Overload for <see cref="M:Eco.Simulation.WorldLayers.LayerInteractions.ProducerSpeciesGrowth.ConstrainedGrowthValue(System.Single,System.Single[],System.Single@,System.String@)"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.LayerInteractions.ProducerSpeciesGrowth.ConstrainedGrowthValue(System.Single,System.Single[],System.Single@,System.String@)">
+            <summary> Calculates growth value between <code>-currentValue</code> and <code>1 - currentValue</code> depending on habitability. Negative value limited to <see cref="P:Eco.Simulation.Types.PlantSpecies.MaxDeathRate"/> and positive limited by <see cref="P:Eco.Simulation.Types.PlantSpecies.MaxGrowthRate"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.LayerInteractions.ProducerSpeciesGrowth.CalculateSpreadFromNeighbors(Eco.Simulation.WorldLayers.WorldLayerNeighborInfo)">
+            <summary> Calculates spread from neighbor cells. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.LayerInteractions.ProducerSpeciesGrowth.PostWorldgenHabitability(System.Single[])">
+            <summary> Calculated initial PostWorldGen habitability for initial plants population. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.LayerInteractions.ProportionalInteraction.GetValue(System.Single[])">
+            <summary> Returns value which will be used for proportion calculation. </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.LayerInteractions.SecondOrderReaction">
+             <summary>
+             Simulates a differential equation of the form dz/dt = c * x * y.
+             This is the same math as is used to describe a second-order chemical reaction, so I've elected to adopt that terminology.
+             It should be an apt analogy for every use of this interaction - acid rain happens when air pollution meets rain; predation happens when predator meets prey; etc.
+            
+             N.B. this class, like all WorldLayerInteractions, does not modify the input layers.
+             In chemical terms, the inputs are both catalysts by default - they are not affected by the reaction.
+             If you wish an input to be affected, create another instance of SecondOrderReaction that has that input as its product.
+             </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.AnimalLayer.OnServerStart">
+            <summary> Callback to be invoked once when server started while <see cref="M:Eco.Simulation.WorldLayers.Layers.AnimalLayer.InitSelf"/> only called once when <see cref="T:Eco.Simulation.WorldLayers.Layers.AnimalLayer"/> created. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.AnimalLayer.GroupAliveAnimalsByLayerPos">
+            <summary> Groups all alive animals of layer's <see cref="T:Eco.Simulation.Types.Species"/> by <see cref="P:Eco.Simulation.Agents.Animal.LayerHomePos"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.AnimalLayer.Push">
+            <summary>
+            1. Spawn animals in patches which don't have enough.
+            2. Damage animals in patches which have too many.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.AnimalLayer.Push(Eco.Shared.Math.Vector2i)">
+            <summary> Sync simulated population with spawned population. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.AnimalLayer.TickPopulation(Eco.Shared.Math.Vector2i,System.Single)">
+            <summary>
+            Ticks animal species population for one <see cref="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.Tick"/>.
+            It applies changes to population (like killed animals), simulates population growth and spread from neighbor cells.
+            Population will only grow if there at least one animal (assuming it was pregnant) and only spread from neighbor cells with at least one organism.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.AnimalLayer.InitSelf">
+            <summary> Set initial layer values. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.AnimalLayer.MaxPop(Eco.Shared.Math.Vector2i)">
+            <summary> Maximal population in <paramref name="layerPos"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.AnimalLayer.BackwardsCompatibilityCheck">
+            <summary> Checks if layer dimensions was changed and re-generated layer in this case. </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.Layers.LayerPosition">
+            <summary> Struct which holds both <see cref="F:Eco.Simulation.WorldLayers.Layers.LayerPosition.Position"/> and <see cref="F:Eco.Simulation.WorldLayers.Layers.LayerPosition.VoxelsPerEntry"/> so may be used with any layer which will translate own value to requested layer position granularity. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.LayerPosition.FromWorldPosition(Eco.Shared.Math.Vector2i,System.Int32)">
+            <summary> Creates <see cref="T:Eco.Simulation.WorldLayers.Layers.LayerPosition"/> from <paramref name="worldPosition"/> with specified <paramref name="voxelsPerEntry"/> granularity. </summary>
+        </member>
+        <member name="P:Eco.Simulation.WorldLayers.Layers.TemperatureLayerSettings.CelsiusRange">
+            <summary> Temperature range in Celsius. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.TemperatureLayerSettings.GetDisplayValue(System.Single,System.Boolean)">
+            <summary> Converts the temperature layer value to Celsius. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.FineToCoarse(Eco.Simulation.WorldLayers.Layers.LayerPosition)">
+            <summary> Convert value from layer with finer granularity to layer with coarser granularity. I.e. for temperature layer with 5x5 granularity it will return average temperature of 4x4 temperature cells for Oak layer with 20x20 granularity. Value depends on layer's value type. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.CoarseToFine(Eco.Simulation.WorldLayers.Layers.LayerPosition)">
+            <summary> Convert value from layer with coarser granularity to layer with finer granularity. I.e. when calculating consumed capacity (5x5 granularity) for trees with 20x20 granularity it will get same value for every consumed capacity cell within coarser tree cell. Value depends on layer's value type. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.TransformInArea(Eco.Shared.Math.WorldArea,System.Func{System.Single,System.Single})">
+            <summary> Transforms value for each cell in the <paramref name="worldArea"/> using <paramref name="transform"/> function. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.GetValue(Eco.Simulation.WorldLayers.Layers.LayerPosition)">
+            <summary> Gets the layer at <paramref name="layerPos"/>. If granularity different then will translate the value. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.TranslateEntryToAmount(Eco.Simulation.WorldLayers.Layers.WorldLayer,Eco.Shared.Math.Vector2i)">
+            <summary>
+            Query <paramref name="other"/> layer amount at <paramref name="layerPos"/>, translating when the other layer resolution is different. Result depends on other layer's <see cref="P:Eco.Simulation.WorldLayers.Layers.WorldLayerSettings.ValueType"/>.
+            For <see cref="F:Eco.Simulation.WorldLayers.Layers.WorldLayerValueType.Amount"/> and <see cref="F:Eco.Simulation.WorldLayers.Layers.WorldLayerValueType.Percent"/> it will return unmodified value, but for <see cref="F:Eco.Simulation.WorldLayers.Layers.WorldLayerValueType.FillRate"/> it will return value multiplied by <see cref="P:Eco.Simulation.WorldLayers.Layers.WorldLayer.CellArea"/>.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.PullStartupLayer(Eco.Simulation.WorldLayers.IStartupWorldLayerPuller)">
+            <summary> Pulls startup value for layer using <paramref name="puller"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.ForEachCell(System.Int32,Eco.Simulation.WorldLayers.Layers.WorldLayer[],System.Action{Eco.Shared.Math.Vector2i,Eco.Shared.Math.WorldArea,System.Single[],Eco.Simulation.WorldLayers.WorldLayerNeighborInfo[]})">
+            <summary> Invokes <paramref name="action"/> for every cell with <paramref name="voxelsPerEntry"/> granularity with normalized values from <paramref name="dependencies"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.PushLayers(Eco.Simulation.WorldLayers.IWorldLayerPusher)">
+            <summary> Push layers with <paramref name="pusher"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.LayerPosToWorldArea(Eco.Shared.Math.Vector2i,System.Int32)">
+            <summary> Converts <paramref name="layerPos"/> to <see cref="T:Eco.Shared.Math.WorldArea"/> with <paramref name="voxelsPerEntry"/> granularity. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.ValStringHtml(System.Single,System.Boolean)">
+            <summary> Returns a string in HTML format for the <paramref name="val"/> using <see name="Settings"/>. Set <paramref name="relative"/> if you wanna to format value difference. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayer.ValStringTooltip(System.Single,System.Boolean)">
+            <summary> Returns a tooltip string for the <paramref name="val"/> using <see name="Settings"/>. Set <paramref name="relative"/> if you wanna to format value difference. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayerSettingsExtensions.ValString(Eco.Simulation.WorldLayers.Layers.WorldLayerSettings,System.Single,System.Boolean,System.Boolean)">
+            <summary> Returns formatted <paramref name="val"/> string in requested format using <paramref name="settings"/>. Set <paramref name="relative"/> if you wanna to format value difference. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayerSettingsExtensions.ValStringHtml(Eco.Simulation.WorldLayers.Layers.WorldLayerSettings,System.Single,System.Boolean)">
+            <summary> Returns a string in HTML format for the <paramref name="val"/> using <paramref name="settings"/>. Set <paramref name="relative"/> if you wanna to format value difference. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayerSettingsExtensions.ValStringTooltip(Eco.Simulation.WorldLayers.Layers.WorldLayerSettings,System.Single,System.Boolean)">
+            <summary> Returns a tooltip string for the <paramref name="val"/> using <paramref name="settings"/>. Set <paramref name="relative"/> if you wanna to format value difference. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Layers.WorldLayerSettings.GetDisplayValue(System.Single,System.Boolean)">
+            <summary> Returns user-friendly representation (i.e. for temperature normalized value [0; 1] it may be value in Celsius). </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.WorldLayerNeighborInfo">
+            <summary>
+            This struct provides on demand values for all neighbor cells around the <see cref="F:Eco.Simulation.WorldLayers.WorldLayerNeighborInfo.cell"/> (3x3 matrix with the cell in the center).
+            It may be used by interactions which requires neighbors info (i.e. for values spreading).
+            </summary>
+        </member>
+        <member name="P:Eco.Simulation.WorldLayers.WorldLayerNeighborInfo.Neighborhood">
+            <summary>
+            The values of the corresponding layer in the 8 adjacent layer cells (plus this center one).
+            Arranged geometrically from least to most x and y, e.g. Neighborhood[0, 2] is the adjacent cell with a smaller x and a larger y coordinate.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.NewWorldLayerSync.OnServerStart">
+            <summary> Callback for the server statup. </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.Pullers.PlantPopulationPuller">
+            <summary> Special kind of IStartupWorldLayerPuller which tracks added/removed plants between ticks and apply changes when tick happens. It also sync layer with actual plants count on startup. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pullers.PlantPopulationPuller.PopulationDelta(Eco.Shared.Math.WorldArea)">
+            <summary> Returns population delta for current added/remove plants snapshot. It will be negative value if removed plants more than added and positive otherwise. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pullers.PlantPopulationPuller.GetStartupValue(Eco.Shared.Math.Vector2i,Eco.Shared.Math.WorldArea)">
+            <summary> On startup ensures world plants count and layer plants count synced. </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.Pullers.PlantPopulationPuller.PlantInAreaFilter">
+            <summary>Function which checks if plant belongs to a specific area. Uses with NetFabric.Hyperlinq for zero-allocation filters.</summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.LayersInfo">
+            <summary> Layers layout info for <see cref="T:Eco.Simulation.WorldLayers.Pushers.PlantSpawner"/> dependencies. </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity">
+            <summary>
+            <see cref="T:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity"/> class holds information about available capacity for <see cref="F:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.LayerNames"/> with <see cref="F:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.VoxelsPerEntry"/> granularity.
+            <see cref="F:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.AvailableCapacities"/> has flatten 2D array structure of [[availableCapacitiesPerLayerForCell1], [availableCapacitiesPerLayerForCell2], .., [availableCapacitiesPerLayerForCellN]].
+            Each such cell is for <see cref="F:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.VoxelsPerEntry"/> dimension. In each cell it has LayerNames.Count entries one value per capacity layer with same index as in LayerNames.
+            We need to have multiple cells in available capacities because of some plants like trees may use multiple capacity cells and should consume capacity from all of them evenly if possible.
+            Small plants usually consume capacity only from one capacity cell.
+            It is up to constructor calling code how to order cells, but usually it has Y groups of X size and offset of each cell may be calculated as (Y * xSize + X) * LayerNames.Count.
+            Capacity may be consumed in two ways:
+            <p>- Consume as much as possible with <see cref="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.Consume(Eco.Simulation.Types.PlantSpecies,System.Int32,System.Int32)"/>, it will ignore unconsumed capacity;</p>
+            <p>- Either fully consume all requested capacities or not consume at all with <see cref="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.TryConsume(Eco.Simulation.Types.PlantSpecies,System.Int32,System.Int32)"/></p>
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.GetSliceSize(System.Int32)">
+            <summary>Returns size of capacities slice for <paramref name="voxelsPerEntry"/> resolution. Calculated as <c>(voxelsPerEntry * voxelsPerEntry / cellArea) * LayerNames.Length</c>.</summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.GetSpeciesRange(Eco.Simulation.Types.PlantSpecies,System.Int32)">
+            <summary>
+            Returns range of capacity values for <paramref name="species"/> for given offset. Range calculated based on scale between species VoxelsPreEntry and capacity VoxelsPerEntry and offset.
+            The offset may be calculated using <c>(Y * xSize + X) * LayerNames.Count</c> formula. (X,Y) is relative capacity cell position.
+            If species voxel per entry is greater than capacity voxel per entry then it will be aligned to include the offset.
+            Range length calculated with <see cref="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.GetSliceSize(System.Int32)"/> for species VoxelsPerEntry.
+            </summary>
+            <example>
+            I.e. if we have 2 capacity layers, capacity VoxelsPerEntry is 5, species1 with VoxelPerEntry equal to 10, species2 with VoxelPerEntry equal to 5 and we have 2x2 capacity area (2*5x2*5=10x10 voxels) then
+            <p>- for (0, 0) normalized offset will be 0 for both species1 and species2;</p>
+            <p>- for (0, 1) normalized offset will be 0 for species1 and (0*2 + 1)*2 = 2 for species2;</p>
+            <p>- for (1, 0) normalized offset will be 0 for species1 and (1*2 + 0)*2 = 4 for species2;</p>
+            <p>- for (1, 1) normalized offset will be 0 for species1 and (1*2 + 1)*2 = 6 for species2;</p>
+            </example>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.TryConsume(Eco.Simulation.Types.PlantSpecies,System.Int32,System.Int32)">
+            <summary>Tries to consume (reduce) available capacity for <paramref name="count"/> of plant <paramref name="species"/>. Returns <c>true</c> if succeed. If failed then no modification to capacity happens.</summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.Consume(Eco.Simulation.Types.PlantSpecies,System.Int32,System.Int32)">
+            <summary>Consumes as much as possible from <see cref="F:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.AvailableCapacities"/> for <paramref name="count"/> of plant <paramref name="species"/>. Consuming means that available capacity reduced by consumed capacity amount.</summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.ConsumeInternal(Eco.Simulation.Types.PlantSpecies,System.Int32,System.Span{System.Single})">
+            <summary>Consumes from <see cref="F:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.AvailableCapacities"/> capacities required for the <paramref name="count"/> of <paramref name="species"/>. Returns <c>true</c> if enough <see cref="F:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.AvailableCapacities"/>.  Consuming means that available capacity reduced by consumed capacity amount.</summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.ConsumeCapacityForOneCell(Eco.Simulation.Types.PlantSpecies,System.Single,System.Span{System.Single})">
+            <summary> Optimized version of <see cref="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity.Consume(Eco.Simulation.Types.PlantSpecies,System.Int32,System.Int32)"/> for one cell with same resolution as capacity. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.BuildLayersInfo">
+            <summary> Builds <see cref="T:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.LayersInfo"/> which contains all info about dependency layers. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.SyncPlants(Eco.Simulation.WorldLayers.Pushers.PlantSpawner.LayersInfo,Eco.Shared.Math.WorldArea,System.Span{Eco.Simulation.WorldLayers.Layers.PlantLayer},Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity,System.Int32)">
+            <summary>
+            Synchronizes the plant layer values and the World plant counts in the <paramref name="area"/>.
+            <paramref name="availableCapacity"/> contains capacities for <paramref name="area"/> and will be consumed by world plants, so after call you will have <paramref name="availableCapacity"/> for new plants.
+            It returns desired plants to spawn as list of <see cref="T:Eco.Simulation.WorldLayers.Layers.PlantLayer"/>. It may have repeatable entries for multiple plants of same species.
+            </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.GetLayerValues``1(System.Span{``0},Eco.Simulation.WorldLayers.Layers.LayerPosition,System.Span{System.Single})">
+            <summary>For each layer in <paramref name="layers"/> saves value at <paramref name="layerPosition"/> to <paramref name="outputValues"/>.</summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.GetAvailableCapacities(Eco.Shared.Math.WorldArea,Eco.Simulation.WorldLayers.Pushers.PlantSpawner.LayersInfo)">
+            <summary>Returns <see cref="T:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity"/> object with available capacities for <paramref name="area"/>. Capacity layers obtained from <paramref name="layersInfo"/>.</summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Apply(Eco.Shared.Math.WorldArea,System.Single[],Eco.Simulation.WorldLayers.WorldLayerNeighborInfo[])">
+            <inheritdoc cref="M:Eco.Simulation.WorldLayers.IWorldLayerPusher.Apply(Eco.Shared.Math.WorldArea,System.Single[],Eco.Simulation.WorldLayers.WorldLayerNeighborInfo[])"/>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.SpawnPlantGroups(Eco.Simulation.WorldLayers.Pushers.PlantSpawner.LayersInfo,Eco.Shared.Math.WorldArea,System.ReadOnlySpan{System.ValueTuple{System.Int32,Eco.Simulation.WorldLayers.Layers.PlantLayer[]}},System.Collections.Generic.List{Eco.Simulation.WorldLayers.Layers.PlantLayer},Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity,System.Int32)">
+            <summary>
+            Spawns all plant groups from <paramref name="plantGroups"/> recursively. Plants grouped by voxelsPerEntry descending.
+            If this is last plant group then it will just spawn plants with <see cref="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.SpawnPlantsInArea(Eco.Shared.Math.WorldArea,System.Collections.Generic.List{Eco.Simulation.WorldLayers.Layers.PlantLayer},Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity,System.Int32)"/>
+            otherwise for each cell in the area for group granularity it calls <see cref="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.SpawnPlantGroups(Eco.Simulation.WorldLayers.Pushers.PlantSpawner.LayersInfo,Eco.Shared.Math.WorldArea,System.ReadOnlySpan{System.ValueTuple{System.Int32,Eco.Simulation.WorldLayers.Layers.PlantLayer[]}},System.Collections.Generic.List{Eco.Simulation.WorldLayers.Layers.PlantLayer},Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity,System.Int32)"/> with all plants from current group in <paramref name="spawnAtPos"/> list.
+            This way it not only spawns nested group plants, but also spawns bigger granularity group plants in one of nested cells.
+            </summary>
+            <example>
+            I.e. we have [(20, [Birch, Fir]), (5, [Corn, Tomato])] plant groups for (0,0)-(20,20) area.
+            First call with all plant groups will have only one cell for the area because it is same size as the area.
+            All trees to spawn collected for this cell. Assume there are [Birch, Birch, Fir].
+            Then <see cref="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.SpawnPlantGroups(Eco.Simulation.WorldLayers.Pushers.PlantSpawner.LayersInfo,Eco.Shared.Math.WorldArea,System.ReadOnlySpan{System.ValueTuple{System.Int32,Eco.Simulation.WorldLayers.Layers.PlantLayer[]}},System.Collections.Generic.List{Eco.Simulation.WorldLayers.Layers.PlantLayer},Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity,System.Int32)"/> called with tailing plant groups: [(5, [Corn, Tomato])].
+            Now, because voxelsPerEntry = 5, it will have 4 cells in the area: (0, 0), (0, 1), (1, 0) and (1, 1).
+            For each cell it will have own list of plants to spawn like [Tomato, Tomato], [Corn, Corn], [Corn, Tomato], [].
+            These list will be concatenated with [Birch, Birch, Fir] from previous plant group before spawn.
+            So it may spawn [Birch, Tomato, Tomato] in first cell, then all not spawned trees ([Birch, Fir]) will be concatenated to next plant spawn list etc.
+            This way trees will be mixed with small plants and distributed between all sub-cells.
+            </example>
+            <param name="layersInfo">Contains shared layers information like all constraint layers, min voxel size for normalization, trampled layer etc.</param>
+            <param name="area">World area for spawning.</param>
+            <param name="plantGroups">Plant groups to spawn. Each plant group is pair of (voxelsPerEntry, plantLayersInGroupArray) ordered by voxelsPerEntry descending.</param>
+            <param name="spawnAtPos">Plants to spawn in the area. Contains all plants from previous group.</param>
+            <param name="availableCapacities"><see cref="T:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity"/> object will non-consumed capacities. Updates every time when new plant added.</param>
+            <param name="baseCapacityOffset">Offset for cell capacities. Used because of optimized flatten capacities structure where all cells capacities stored in one array.</param>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.TryFindGoodPlaceAndConsumeCapacity(Eco.Simulation.Types.PlantSpecies,System.Collections.Generic.List{Eco.Shared.Math.Vector3i},System.Collections.Generic.List{Eco.Simulation.Agents.Tree},Eco.Simulation.WorldLayers.Pushers.PlantSpawner.Capacity,System.Int32,Eco.Shared.Math.Vector3i@)">
+            <summary> Checks both capacity and placement for <paramref name="plantSpecies"/>. It will return first good place in <paramref name="space"/> output parameter. No space or capacity will be used if check fail. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.TryFindGoodPlace(System.Collections.Generic.List{Eco.Shared.Math.Vector3i},Eco.Simulation.Types.PlantSpecies,System.Collections.Generic.List{Eco.Simulation.Agents.Tree},Eco.Shared.Math.Vector3i@)">
+            <summary>Tries to find good place for <paramref name="plantSpecies"/> for one of <paramref name="spaces"/>. If succeed returns <c>true</c> and found place as <paramref name="goodPlace"/>.</summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.Pushers.PlantSpawner.PostWorldGenPush(Eco.Shared.Math.WorldArea,System.Single[],Eco.Simulation.WorldLayers.WorldLayerNeighborInfo[])">
+            <inheritdoc cref="M:Eco.Simulation.WorldLayers.IPostWorldGenWorldLayerPusher.PostWorldGenPush(Eco.Shared.Math.WorldArea,System.Single[],Eco.Simulation.WorldLayers.WorldLayerNeighborInfo[])"/>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.WorldLayerInteraction`1">
+            <summary>
+            Models an effect that a set of layers have on another layer, e.g. animals eating plants for food kills plants.
+            </summary>
+        </member>
+        <member name="P:Eco.Simulation.WorldLayers.WorldLayerInteraction`1.RequiresNeighborhood">
+            <summary> Should be set if the interaction requires <see cref="T:Eco.Simulation.WorldLayers.WorldLayerNeighborInfo"/> for layer values. By default <c>false</c> for optimization purposes. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.WorldLayerManager.PostWorldGenPlants">
+            <summary> Called as post world gen step to sync plants state, cleanup dead plants (should ever be?) and randomize they ages. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.WorldLayerManager.PostWorldGenClimateSim">
+            <summary> Called as post world gen step to setup climate simulation properties for generated world. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.WorldLayerManager.BeginTick">
+            <summary> Tries to start World Layer manager tick. Usually used inside of <see cref="M:Eco.Simulation.WorldLayers.WorldLayerManager.Tick"/>, but also may be used by post world gen stuff. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.WorldLayerManager.EndTick">
+            <summary> Ends World Layer Manager tick previously started by <see cref="M:Eco.Simulation.WorldLayers.WorldLayerManager.BeginTick"/>. </summary>
+        </member>
+        <member name="M:Eco.Simulation.WorldLayers.WorldLayerManager.SetLayerPushPullActive(System.String,System.Boolean)">
+            <summary> Sets the PushPullActive state for a layer, enabling or disabling its activity. </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.WorldLayerPuller`1">
+            <summary>
+            Modifies a world layer based on the state of the world and events since the last tick, e.g. adjusts animal population based on player hunting activity.
+            </summary>
+        </member>
+        <member name="T:Eco.Simulation.WorldLayers.WorldLayerPusher`1">
+            <summary>
+            Modifies the world to reflect the state of the world layer simulation, e.g. spawns and kills animals to make the population match.
+            </summary>
+        </member>
+        <member name="P:Eco.Simulation.WorldLayers.WorldLayerPusher`1.DependencyLayerNames">
+            <summary>Layer names which should be used to populate layerValues for <see cref="M:Eco.Simulation.WorldLayers.WorldLayerPusher`1.Apply(Eco.Shared.Math.WorldArea,System.Single[],Eco.Simulation.WorldLayers.WorldLayerNeighborInfo[])"/>.</summary>
+        </member>
+        <member name="M:Eco.WorldGenerator.EcoColorExtensions.ToSharpNoiseColor(Eco.Shared.Utils.Color)">
+            <summary>Converts 'Eco.Shared.Utils.Color' to 'SharpNoise.Utilities.Imaging.Color'</summary>
+        </member>
+        <member name="F:Eco.WorldGenerator.WorldLayerPanel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Eco.WorldGenerator.WorldLayerPanel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Eco.WorldGenerator.WorldLayerPanel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

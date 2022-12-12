@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eco.World</name>
+    </assembly>
+    <members>
+        <member name="M:Eco.World.BlockManager.AddBlockMapping(System.Type,System.UInt16)">
+            <summary>Fills block mappings for <paramref name="blockType"/>.</summary>
+        </member>
+        <member name="T:Eco.World.Blocks.Block">
+            <summary> Base type for all block world blocks. </summary>
+        </member>
+        <member name="M:Eco.World.Blocks.Block.IsAny``2">
+            <summary>Checks if <see cref="T:Eco.World.Blocks.Block"/> is either <typeparamref name="T1"/> or <typeparamref name="T2"/>. More efficient than <c>block.Is&lt;T1&gt;() || block.Is&lt;T2&gt;()</c>.</summary>
+        </member>
+        <member name="T:Eco.World.Blocks.Fertile">
+            <summary> Can support plant-life. </summary>
+        </member>
+        <member name="F:Eco.World.Blocks.Fertile.Fertility">
+            <summary> Coefficient of fertility for this block (0.0-1.0). In example for desert biome blocks it will have lesser fertility per block to prevent to make it best place for plant growth. </summary>
+        </member>
+        <member name="P:Eco.World.Blocks.IsFormAttribute.FormType">
+            <summary> FormType for form, eg typeof(WallFormType), typeof(FloorFormType), typeof(RoofFormType). </summary>
+        </member>
+        <member name="P:Eco.World.Blocks.IsFormAttribute.MaterialType">
+            <summary> The item type this form can be created from. </summary>
+        </member>
+        <member name="T:Eco.World.Blocks.BiomeDestructible">
+            <summary> This block type may be destructed by Biome block. If no <see cref="P:Eco.World.Blocks.BiomeDestructible.DestructedBy"/> blocks specified then may be destructed by any biome block. </summary>
+        </member>
+        <member name="P:Eco.World.Blocks.BiomeDestructible.DestructedBy">
+            <summary> Block types by which this block may be destructed. </summary>
+        </member>
+        <member name="T:Eco.World.Blocks.CanBeRoad">
+            <summary> Marks attribute to be convertible into <see cref="T:Eco.World.Blocks.Road"/>. </summary>
+        </member>
+        <member name="T:Eco.World.Blocks.LookAtTooltip">
+            <summary> Look at tooltip for a block (in case if you need to override or don't have creating item). </summary>
+        </member>
+        <member name="T:Eco.World.Blocks.EncasedWaterBlock">
+            <summary>
+            Water that is under other water or solid blocks, at maximum level. Does no processing of it's own.
+            </summary>
+        </member>
+        <member name="T:Eco.World.Blocks.ITickableBlock">
+            <summary> Wakes up when a nearby block changes, and ticked while not asleep. </summary>
+        </member>
+        <member name="T:Eco.World.Blocks.WaterBlock">
+            <summary>
+            Water block that is that top level of a body of water, usually exposed to air and can flow sideways and down.
+            </summary>
+        </member>
+        <member name="M:Eco.World.PersistentChunk.RemoveTransientBlocks(Eco.World.Blocks.Block[])">
+            <summary>Removes all transient blocks for <paramref name="blocks"/> array.</summary>
+        </member>
+        <member name="M:Eco.World.PersistentChunk.UpdateBlockCaches(Eco.World.Blocks.Block[])">
+            <summary>
+            Updates following block caches:
+            - maxYCache      - max solid block Y for X,Z coordinate
+            - topBlockCache  - top non-empty block for X,Z coordinate
+            - maxWaterHeight - max underwater block Y which is a top block for X,Z coordinate
+            It assumed to be called only internally from <see cref="M:Eco.World.PersistentChunk.Convert(Eco.Core.Serialization.Migrations.MigrationManager,System.Boolean)"/> method and also assumed to
+            be called for chunks in same column from top chunk to bottom chunk. It ensures valid results and
+            allows to make significant optimization by skipping X,Z coordinates for X,Z positions if chunk is below maxY.
+            </summary>
+            <param name="blocks"></param>
+        </member>
+        <member name="M:Eco.World.PersistentChunk.Convert(Eco.Core.Serialization.Migrations.MigrationManager,System.Boolean)">
+            <summary>
+            Converts chunk from old format to new chunk format using <paramref name="migrationManager"/>.
+            It is required, because for optimization purposes chunk contains serialized blocks data, but when
+            schema changes block ids may be changed as well.
+            </summary>
+            <param name="migrationManager">Migration manager containing information about old and new schemas.</param>
+            <param name="legacy">this flag used only for backward compatibility with 8.3, may be removed in 10.0.</param>
+        </member>
+        <member name="M:Eco.World.PersistentChunk.UpdateHasTransientBlocks">
+            <summary>Recalculates if chunk has <see cref="T:Eco.World.Blocks.Transient"/> blocks, updates <see cref="P:Eco.World.PersistentChunk.HasTransientBlocks"/> property and returns new value. If the chunk is frozen then just returns current value or <c>false</c> if undefined.</summary>
+        </member>
+        <member name="M:Eco.World.PersistentChunkGrid.ValidateCaches">
+            <summary>Validates all caches if they are not out of sync with <see cref="T:Eco.Shared.Voxel.ChunkGrid`1"/> blocks.</summary>
+        </member>
+        <member name="M:Eco.World.WorldExtensions.IsValidPathPos(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Check that a position is a valid position for an animal to path through. </summary>
+        </member>
+        <member name="M:Eco.World.WorldExtensions.IsJustAboveGround(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Return true if the block pos is just above solid ground but is not itself solid. </summary>
+        </member>
+        <member name="M:Eco.World.WorldExtensions.IsTopGround(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Return true if the block pos is solid and above is not. </summary>
+        </member>
+        <member name="M:Eco.World.WorldExtensions.Describe(Eco.Shared.Math.WorldPosition3i)">
+            <summary> Description of a position based on what's going on in the world there. </summary>
+        </member>
+        <member name="M:Eco.World.World.GetBlock(Eco.Shared.Math.Vector3i)">
+            <summary> Returns the block at the location or Block.Empty. Returns <see cref="P:Eco.World.Blocks.Block.Empty"/> for invalid <paramref name="worldPos"/> (i.e. Y negative or Z above top block).</summary>
+        </member>
+        <member name="M:Eco.World.World.GetBlock(Eco.Shared.Math.WrappedWorldPosition3i)">
+            <summary> Returns the block at the location or Block.Empty. </summary>
+        </member>
+        <member name="M:Eco.World.World.ClampToWaterHeight(Eco.Shared.Math.Vector3i)">
+            <summary> Clamps Y coordinate of <paramref name="pos"/> to water height </summary>
+        </member>
+        <member name="M:Eco.World.World.DeleteBlock(Eco.Shared.Math.WrappedWorldPosition3i,System.Boolean)">
+            <summary>Deletes the block at from the world at worldPos.</summary>
+            <param name="worldPos">The world position of the block to be deleted.</param>
+            <param name="checkForWaterFlow">Set to true to replace the block with Block.Empty. Ie. Crater should force delete the terrain. Handles removing blocks underwater.</param>
+        </member>
+        <member name="M:Eco.World.World.WorldWrapChunkPos(Eco.Shared.Math.Vector3i)">
+            <summary> Ensures the given ChunkPos is world-wrapped. </summary>
+        </member>
+        <member name="M:Eco.World.World.GetChunkColumn(Eco.Shared.Math.Vector2i)">
+            <summary> Returns all the current chunks at the given XZ chunkPos coordinate organized from lowest to highest. </summary>
+        </member>
+        <member name="M:Eco.World.World.GetChunkColumnAscendingFrom(Eco.Shared.Math.Vector3i)">
+            <summary> Returns all the current chunks starting (inclusively) at the given chunkPos coordinate extending to the top of the column in ascending order. </summary>
+        </member>
+        <member name="M:Eco.World.World.GetChunkColumnFromTop(Eco.Shared.Math.Vector2i)">
+            <summary> Returns all the current chunks at the given XZ chunkPos coordinate organized from highest to lowest. </summary>
+        </member>
+        <member name="M:Eco.World.World.ReCacheAllData(System.Boolean)">
+            <summary> Invalidates top block and underwater block caches for every X,Z in the world. It will only trigger cache update events if <paramref name="notify"/> set to <c>true</c>. </summary>
+        </member>
+        <member name="M:Eco.World.World.ReCacheColumns(System.Collections.Generic.IEnumerable{Eco.Shared.Math.Vector2i},System.Int32,System.Boolean)">
+            <summary>Invalidates all block caches for requested set of chunk column positions (as 2D chunk positions).</summary>
+        </member>
+        <member name="M:Eco.World.World.ReCacheChunkColumnData(Eco.Shared.Math.Vector2i,System.Boolean)">
+            <summary> Invalidates world caches for all blocks in the chunk column at <paramref name="chunkPosXZ"/>. </summary>
+        </member>
+        <member name="M:Eco.World.World.ReCacheNoNotify(Eco.Shared.Math.Vector2i)">
+            <summary> Invalidates and recalculates world cache values at <paramref name="worldPosXZ"/>. Doesn't trigger any cache update events. </summary>
+        </member>
+        <member name="M:Eco.World.World.ReCacheWithNotify(Eco.Shared.Math.Vector2i)">
+            <summary> Invalidates and recalculates world cache values at <paramref name="worldPosXZ"/>. Triggers cache update events if cache value changes. </summary>
+        </member>
+        <member name="M:Eco.World.World.GetTopPathY(Eco.Shared.Math.Vector2i)">
+            <summary>The y position above the top solid block</summary>
+        </member>
+        <member name="M:Eco.World.World.GetTopBlockY(Eco.Shared.Math.Vector2i)">
+            <summary>The y position of the top solid block</summary>
+        </member>
+        <member name="M:Eco.World.World.GetTopBlockUnderwater(Eco.Shared.Math.Vector2i,System.Int32)">
+            <summary>Y position of the top solid block underwater. Try detecting ground underwater manually if there's a solid above water surface</summary>
+        </member>
+        <member name="M:Eco.World.WorldChunkGrid.DeleteBlock(Eco.Shared.Math.WrappedWorldPosition3i,System.Boolean)">
+            <summary>See <see cref="M:Eco.World.World.DeleteBlock(Eco.Shared.Math.WrappedWorldPosition3i,System.Boolean)"/></summary>
+        </member>
+        <member name="M:Eco.World.WorldChunkGrid.HandleWaterBlock(Eco.Shared.Math.WrappedWorldPosition3i,System.Type@)">
+            <summary>Handle placing a water block instead of an empty block. I.E. Replaces blockResult with a water block if under water.</summary>
+        </member>
+        <member name="M:Eco.World.WorldChunkGridBuilder.BuildFromImportString(Eco.Shared.Math.Vector3i,System.String)">
+            <summary>
+            Let you make building by description string which may be easily copy-pasted.
+            Following commands supported:
+            - room:dx:dy:dz:width:height:depth - makes a room with offset from current position (dx, dy, dz) and interior size (width, height, depth)
+            - hplane:dx:dy:dz:width:depth - makes a side plane with offset from current position (dx, dy, dz) and provided width and depth
+            - splane:dx:dy:dz:height:depth - makes a vertical plane with offset from current position (dx, dy, dz) and provided height and depth
+            - fplane:dx:dy:dz:width:height - makes a horizontal plane with offset from current position (dx, dy, dz) and provided width and height
+            - cube:dx:dy:dz:width:height:depth - makes a room cube offset from current position (dx, dy, dz) and size (width, height, depth)
+            - b:dx:dy:dz - single block with offset from current position (dx, dy, dz)
+            - bt:BlockType - set building block type
+            Commands should be separated with ';'.
+            Sample (room with door):
+             bt:HewnLogCube;room:0:-1:0:3:4:3;bt:Empty;fplane:2:0:0:1:2
+            .
+            </summary>
+        </member>
+    </members>
+</doc>

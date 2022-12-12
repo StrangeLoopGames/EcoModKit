@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SteamGameServer</name>
+    </assembly>
+    <members>
+        <member name="T:Eco.SteaworksUtils.ServerSteamworks">
+            <summary> Responsible for Steamwork GameServer: initialization, text filter and china launcher /// </summary>
+        </member>
+    </members>
+</doc>

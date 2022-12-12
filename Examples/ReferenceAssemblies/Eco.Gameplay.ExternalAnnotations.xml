@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assembly name="Eco.Gameplay">
+  <member name="P:Eco.Gameplay.Civics.GameValues.ProgressivePercent.Number">
+    <attribute ctor="M:JetBrains.Annotations.NonNegativeValueAttribute.#ctor" />
+  </member>
+  <member name="P:Eco.Gameplay.Civics.GameValues.ThresholdMileStone.Percent">
+    <attribute ctor="M:JetBrains.Annotations.NonNegativeValueAttribute.#ctor" />
+  </member>
+  <member name="P:Eco.Gameplay.Civics.GameValues.ThresholdMileStone.Threshold">
+    <attribute ctor="M:JetBrains.Annotations.NonNegativeValueAttribute.#ctor" />
+  </member>
+  <member name="P:Eco.Gameplay.Components.FuelSupplyComponent.FuelTags">
+    <attribute ctor="M:JetBrains.Annotations.PublicAPIAttribute.#ctor" />
+  </member>
+  <member name="M:Eco.Gameplay.Components.PluginModulesComponent.#ctor">
+    <attribute ctor="M:JetBrains.Annotations.UsedImplicitlyAttribute.#ctor" />
+  </member>
+  <member name="P:Eco.Gameplay.Items.ItemStack.Item">
+    <attribute ctor="M:JetBrains.Annotations.CanBeNullAttribute.#ctor" />
+  </member>
+  <member name="M:Eco.Gameplay.Items.TagStack.#ctor">
+    <attribute ctor="M:JetBrains.Annotations.UsedImplicitlyAttribute.#ctor" />
+  </member>
+  <member name="M:Eco.Gameplay.Maintenance.MaintenancePlugin.#ctor">
+    <attribute ctor="M:JetBrains.Annotations.UsedImplicitlyAttribute.#ctor" />
+  </member>
+  <member name="P:Eco.Gameplay.Modules.EfficiencyModule.SkillTypeID">
+    <attribute ctor="M:JetBrains.Annotations.UsedImplicitlyAttribute.#ctor" />
+  </member>
+  <member name="M:Eco.Gameplay.Players.DifficultyConfig.#ctor">
+    <attribute ctor="M:JetBrains.Annotations.UsedImplicitlyAttribute.#ctor" />
+  </member>
+  <member name="M:Eco.Gameplay.Players.UserManager.VerifyAndLookUpUser(System.String,System.String,System.String)">
+    <parameter name="serverId">
+      <attribute ctor="M:JetBrains.Annotations.NotNullAttribute.#ctor" />
+    </parameter>
+    <parameter name="authtoken">
+      <attribute ctor="M:JetBrains.Annotations.NotNullAttribute.#ctor" />
+    </parameter>
+    <parameter name="authTokenType">
+      <attribute ctor="M:JetBrains.Annotations.NotNullAttribute.#ctor" />
+    </parameter>
+  </member>
+  <member name="T:Eco.Gameplay.Systems.Messaging.Chat.Commands.ChatSubCommandAttribute">
+    <attribute ctor="M:JetBrains.Annotations.MeansImplicitUseAttribute.#ctor" />
+  </member>
+  <member name="T:Eco.Gameplay.Systems.Messaging.Chat.Commands.MessagingCommands">
+    <attribute ctor="M:JetBrains.Annotations.UsedImplicitlyAttribute.#ctor" />
+  </member>
+  <member name="T:Eco.Gameplay.Systems.Tooltip.TooltipAttribute">
+    <attribute ctor="M:JetBrains.Annotations.MeansImplicitUseAttribute.#ctor(JetBrains.Annotations.ImplicitUseTargetFlags)" />
+  </member>
+  <member name="M:Eco.Gameplay.Tutorial.UserTask.#ctor">
+    <attribute ctor="M:JetBrains.Annotations.UsedImplicitlyAttribute.#ctor" />
+  </member>
+  <member name="M:Eco.Gameplay.Utils.SimpleEntry.#ctor">
+    <attribute ctor="M:JetBrains.Annotations.UsedImplicitlyAttribute.#ctor" />
+  </member>
+</assembly>

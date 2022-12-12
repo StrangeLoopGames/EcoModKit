@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eco.ModKit</name>
+    </assembly>
+    <members>
+        <member name="F:Eco.ModKit.ModEntryControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Eco.ModKit.ModEntryControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Eco.ModKit.ModEntryControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Eco.ModKit.ModsDownloadManager.GetModInfosAsync(System.Threading.CancellationToken,System.Int32,System.Int32)">
+            <summary>
+            Get a list of mods from mod.io
+            </summary>
+            <param name="token"></param>
+            <param name="offset"></param>
+            <param name="pageSize">max number of results to return, can be a max of 100</param>
+            <returns></returns>
+        </member>
+        <member name="M:Eco.ModKit.ModDataSync.GetBlockTooltipItem(System.Type)">
+            <summary> Returns most suitable <see cref="T:Eco.Gameplay.Items.Item"/> for <see cref="T:Eco.World.Blocks.BlockType"/> to be displayed in Look At tooltip. </summary>
+        </member>
+        <member name="M:Eco.ModKit.ModDataSync.GetLookAtTooltip(System.Type)">
+            <summary> Returns text for Look At tooltip for specified <paramref name="blockType"/>. The tooltip appear on the client when player is looking on a block. </summary>
+        </member>
+        <member name="M:Eco.ModKit.ModKitPlugin.LoadModsDataAsync">
+            <summary>Loads mods data.</summary>
+        </member>
+        <member name="M:Eco.ModKit.ModKitPlugin.LiveUpdateAsync">
+            <summary>If <see cref="P:Eco.ModKit.ModKitConfig.LiveUpdateUnityFiles"/> enabled then it will refresh content every second.</summary>
+        </member>
+        <member name="M:Eco.ModKit.ModKitPlugin.AppDomain_AssemblyResolve(System.Object,System.ResolveEventArgs)">
+            <summary> Function to resolve mod dll dependencies. </summary>
+        </member>
+        <member name="M:Eco.ModKit.RoslynCompiler.GetTypes">
+            <summary> Get all class types that are not compiler generated. </summary>
+        </member>
+        <member name="M:Eco.ModKit.RoslynCompiler.CollectModSourceFiles">
+            <summary>
+            <p>Returns all source files from `__core__` directory and files from `UserCode` directory.
+            If `UserCode` contains file with same path as in `__core__` directory, but with .override suffix in name (before .cs) then it will replace file from `__core__`.</p>
+            <p><b>Example:</b> <c>__core__\AutoGen\Blocks\AsphaltBlock.cs</c> and <c>UserCode\AutoGen\Blocks\AsphaltBlock.override.cs</c></p>
+            <p>Otherwise both files will be loaded and file from <c>UserCode</c> should extend existing class with partial methods or add new class.</p>
+            </summary>
+        </member>
+    </members>
+</doc>

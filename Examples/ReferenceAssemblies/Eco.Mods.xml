@@ -1,0 +1,1418 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eco.Mods</name>
+    </assembly>
+    <members>
+        <member name="T:Eco.Mods.TechTree.Agouti">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Alligator">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Bass">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BighornSheep">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Bison">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BlueShark">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Cod">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Coyote">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Crab">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Deer">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Elk">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Fox">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Hare">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Jaguar">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MoonJellyfish">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MountainGoat">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Otter">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PacificSardine">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PrairieDog">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Salmon">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SnappingTurtle">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Tarantula">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Trout">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Tuna">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Turkey">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.Wolf">
+            <summary>Auto-generated class. All your changes will be wiped with next update!</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AshlarBasaltRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AshlarGneissRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AshlarGraniteRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AshlarLimestoneRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AshlarSandstoneRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AshlarShaleRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AsphaltConcreteRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BarrelRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BasaltBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BiodieselRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BirchLogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BrickRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CedarLogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CeibaLogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ClayBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CoalBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeBirchLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeCedarLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeCeibaLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeFirLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeJoshuaLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeOakLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositePalmLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeRedwoodLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeSaguaroLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositeSpruceLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CopperBarRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CopperConcentrateRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CopperOreBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CopperPipeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CorrugatedSteelRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CottonCarpetRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CottonCurtainsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedBasaltBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedCoalBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedCopperOreRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedGneissBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedGoldOreRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedGraniteRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedIronOreRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedLimestoneRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedMixedRockBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedOilShaleBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedSandstoneRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedShaleRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedSlagBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedStoneBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.DirtRampRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FirLogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FlatSteelRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FramedGlassRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GasolineRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GlassRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GneissBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GoldBarRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GoldConcentrateRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GoldOreBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GraniteBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HardwoodHewnLogRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HardwoodLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HewnLogRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IronBarRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IronConcentrateRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IronOreBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IronPipeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.JoshuaLogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LimestoneBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MortaredBasaltBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MortaredGneissBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MortaredGraniteRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MortaredLimestoneRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MortaredSandstoneRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MortaredShaleBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MortaredStoneRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.NylonCarpetRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.NylonCurtainsBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.OakLogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PalmLogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PetroleumRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RedwoodLogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ReinforcedConcreteRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SaguaroRibBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SandstoneBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ShaleBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SlagBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SoftwoodHewnLogRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SoftwoodLumberRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SpruceLogBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteelBarRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteelPipeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.StoneBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.StoneRampRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.StoneRoadRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TreeDebrisBlock">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WoolCarpetRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WoolCurtainsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedCircuitItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedCombustionEngineItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AgoutiCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AgricultureResearchPaperAdvancedItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AgricultureResearchPaperModernItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AlligatorCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ArrowItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AxeItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BasicCircuitItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BeaverCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BighornCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BisonCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BlueSharkItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BoardItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BoilerItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BowItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CelluloseFiberItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CementItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CharcoalItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ClamItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ClothItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CO2CanisterItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CodItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CombustionEngineItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CopperWiringItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CottonBollItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CottonFabricItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CottonThreadItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CoyoteCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrabCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CulinaryResearchPaperAdvancedItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CulinaryResearchPaperBasicItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CulinaryResearchPaperModernItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.DeerCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.DendrologyResearchPaperAdvancedItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.DendrologyResearchPaperBasicItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.DendrologyResearchPaperModernItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.EckoTheDolphinItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ElectricMotorItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ElkCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.EngineeringResearchPaperAdvancedItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.EngineeringResearchPaperModernItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.EpoxyItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.EthanolItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FiberglassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FoxCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FurPeltItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GatheringResearchPaperBasicItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GearboxItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GeologyResearchPaperAdvancedItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GeologyResearchPaperBasicItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GeologyResearchPaperModernItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GoldFlakesItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GoldWiringItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HardwoodBoardItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HareCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HeatSinkItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IronAxleItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IronGearItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IronPlateItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IronSawBladeItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IronWheelItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.JaguarCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.KelpItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LargeHangingWoodSignItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LargeStandingWoodSignItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LeatherHideItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LightBulbItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MarmotCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MetallurgyResearchPaperAdvancedItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MetallurgyResearchPaperBasicItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MetallurgyResearchPaperModernItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MoonJellyfishItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MortarItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MountainGoatCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.NailItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.NuclearFuelItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.NylonItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.NylonChipsItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.NylonFabricItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.NylonThreadItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.OtterCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PacificSardineItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PaperItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PickaxeItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PistonItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PlantFibersItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PlasticItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PortableSteamEngineItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PrairieDogCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PropertyToolItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.QuicklimeItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RadiatorItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RebarItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RivetItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RubberWheelItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SalmonItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ScrewsItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ServoItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ShornWoolItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ShovelItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SmallHangingWoodSignItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SmallStandingWoodSignItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SnappingTurtleCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SoftwoodBoardItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteamTractorHarvesterItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteamTractorPlowItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteamTractorSowerItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteelAxleItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteelGearItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteelGearboxItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteelPlateItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SteelSawBladeItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.StrangeFuelItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SubstrateItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SyntheticRubberItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TorchItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TroutItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TunaItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TurkeyCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.UrchinItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ValveItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WolfCarcassItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WoodenWheelItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WoodPulpItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WoolFabricItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WoolYarnItem">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedBakingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedCookingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedMasonryUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedSmeltingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedUpgradeLvl1Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedUpgradeLvl2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedUpgradeLvl3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedUpgradeLvl4Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BakingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BasicEngineeringUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BasicUpgradeLvl1Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BasicUpgradeLvl2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BasicUpgradeLvl3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BasicUpgradeLvl4Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ButcheryUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfireCookingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CarpentryAdvancedUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CarpentryBasicUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositesUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CookingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CuttingEdgeCookingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ElectronicsUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FarmingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FertilizersUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GlassworkingAdvancedUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GlassworkingModernUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IndustryUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LoggingAdvancedUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LoggingBasicUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MasonryAdvancedUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MasonryBasicUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MechanicsAdvancedUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MechanicsModernUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MillingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MiningAdvancedUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MiningBasicUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MiningModernUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ModernUpgradeLvl1Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ModernUpgradeLvl2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ModernUpgradeLvl3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ModernUpgradeLvl4Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.OilDrillingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PaperMillingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PotteryUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SmeltingUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TailoringModernUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TailoringUpgradeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BakedMortarRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BeetSugarRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BoardsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ButcherBisonRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ButcherHareRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ButcherMediumAnimalRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ButcherMediumWoolyAnimalRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ButcherSmallAnimalRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ButcherTinyFurAnimalRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ButcherTinyLeatherAnimalRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfireAnimalMediumRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfireAnimalSmallRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfireAnimalTinyRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfireBisonRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfireFishLargeRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfireFishMediumRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfireFishSmallRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfirePacificSardineRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CharredMortarRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CleanCrabRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CleanLargeFishRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CleanMediumFishRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CleanMoonJellyfishRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CleanPacificSardineRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CleanUrchinsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ConcentrateCopperLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ConcentrateDryIronRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ConcentrateDryIronLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ConcentrateGoldLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ConcentrateIronLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CornEthanolRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedBasaltLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedBasaltLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedCopperLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedCopperLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedGneissLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedGneissLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedGoldLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedGoldLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedGraniteLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedGraniteLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedIronLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedIronLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedLimestoneLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedLimestoneLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedMortaredStoneRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedMortaredStoneLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedSandstoneLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedSandstoneLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedShaleLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedShaleLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedSlagLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedSlagLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedStoneRampRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedStoneRampLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedStoneRoadRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CrushedStoneRoadLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CulinaryResearchPaperAdvancedMeatRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CulinaryResearchPaperBasicFishRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CulinaryResearchPaperBasicMeatRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.DirtRampBasicRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ExoticFruitSaladRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ExoticSaladRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ExoticVegetableMedleyRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FishStewRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ForestSaladRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GrasslandSaladRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HardwoodBoardsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HewnHardwoodRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HewnLogDoorRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HewnLogsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HewnSoftwoodRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MasonryMortarRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MeltingFatRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MixedFruitSaladRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MixedSaladRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MixedVegetableMedleyRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MortaredStonesRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MushroomMedleyRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.QuicklimeGlassRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RainforestFruitSaladRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RainforestSaladRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RefineFishRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RefineKelpRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RefineMeatRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RefineTallowRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.RenderFatRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SandConcentrateRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SandConcentrateLv2Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SandConcentrateLv3Recipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SawBoardsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SawHardwoodBoardsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SawSoftwoodBoardsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ShaleBrickRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ShredKelpRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ShuckClamsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SmeltCopperRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SmeltGoldRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SmeltIronRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SoftwoodBoardsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SpinWoolYarnRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SunflowerOilRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WeaveCottonCurtainsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WeaveCottonFabricRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WeaveLargeBathMatRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WeaveNylonCurtainsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WeaveNylonFabricRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WeaveSmallBathMatRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WeaveWoolCurtainsRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WeaveWoolFabricRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WheatEthanolRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.WheatMortarRecipe">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedBakingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedCookingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedMasonrySkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.AdvancedSmeltingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BakingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.BasicEngineeringSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ButcherySkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CampfireCookingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CarpenterSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CarpentrySkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ChefSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CompositesSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CookingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.CuttingEdgeCookingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.ElectronicsSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.EngineerSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FarmerSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FarmingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.FertilizersSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GatheringSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.GlassworkingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HunterSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.HuntingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.IndustrySkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LoggingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MasonSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MasonrySkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MechanicsSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MillingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.MiningSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.OilDrillingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PaperMillingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.PotterySkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SelfImprovementSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SmeltingSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SmithSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.SurvivalistSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TailorSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TailoringSkill">
+            <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
+        </member>
+        <member name="M:Eco.Mods.TechTree.StarterCampItem.OverlappingPlots(Eco.Shared.Math.Vector3i,Eco.Shared.Math.Quaternion)">
+            <summary>Iterates the plots that this world object covers.</summary>
+        </member>
+        <member name="M:Eco.Mods.TechTree.BedComponent.BedPickupConfirmation">
+            <summary>Return a warning text if there's any sleeping user on this bed</summary>
+        </member>
+        <member name="M:Eco.Mods.TechTree.CraneObject.CanInteract(Eco.Shared.Math.Vector3,Eco.Shared.Math.Vector3,Eco.Shared.Items.InteractionInfo)">
+            <inheritdoc cref="M:Eco.Gameplay.Interactions.IInteractionChecker.CanInteract(Eco.Shared.Math.Vector3,Eco.Shared.Math.Vector3,Eco.Shared.Items.InteractionInfo)"/>
+        </member>
+        <member name="M:Eco.Mods.TechTree.ExcavatorObject.CanInteract(Eco.Shared.Math.Vector3,Eco.Shared.Math.Vector3,Eco.Shared.Items.InteractionInfo)">
+            <inheritdoc cref="M:Eco.Gameplay.Interactions.IInteractionChecker.CanInteract(Eco.Shared.Math.Vector3,Eco.Shared.Math.Vector3,Eco.Shared.Items.InteractionInfo)"/>
+        </member>
+        <member name="T:Eco.Mods.TechTree.LargeDoorUtils.LargeDoorMessagesContainer">
+            <summary> Custom messages container for the OnOffComponent of Large Doors.</summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.DifficultyBasedRecipeVariants">
+            <summary> Registers recipe variants for different difficulty settings. </summary>
+        </member>
+        <member name="T:Eco.Mods.TechTree.TagDefinitions">
+            <summary> Contains all <see cref="T:Eco.Gameplay.Items.TagDefinition"/> for Mods. </summary>
+        </member>
+        <member name="M:Eco.Mods.TechTree.TagDefinitions.Initialize">
+            <summary> Called on Mods initialization for the marker interface <see cref="T:Eco.Core.Plugins.Interfaces.IModInit"/>. Registers all <see cref="T:Eco.Gameplay.Items.TagDefinition"/> from <see cref="F:Eco.Mods.TechTree.TagDefinitions.Definitions"/>. </summary>
+        </member>
+        <member name="M:Eco.Mods.TechTree.FishingPoleItem.CastLure(Eco.Gameplay.Players.Player,Eco.Shared.Math.Vector3,Eco.Shared.Math.Vector3)">
+            <summary> Creates the LureEntity from a Client-command, assigning its controller, position, and the force to apply at spawn. </summary>
+        </member>
+        <member name="T:Eco.Mods.Organisms.Behaviors.FindAndEatPlantsBehavior">
+            <summary>An enumerator gets instantiated per-animal while seeking food and deleted when the animal is satisfied. </summary>
+        </member>
+        <member name="M:Eco.Mods.Organisms.Behaviors.MovementBehaviors.FindTargetSwimPosition(Eco.Simulation.Agents.Animal,Eco.Shared.Math.Vector2,System.Boolean,System.Int32,Eco.Shared.Math.Vector3i@)">
+            <summary>Finds target swim position taking into account species characteristics like if it can swim near coast and can float on surface.</summary>
+        </member>
+        <member name="M:Eco.Mods.Organisms.LandPredatorBrain.ReactOnBlock(Eco.Simulation.Agents.Animal,Eco.Shared.Math.Vector3,System.Single)">
+            <summary> Provide predator's reaction on blocks around </summary>
+        </member>
+        <member name="T:Eco.Mods.ChatLog.ChatLogger">
+            <summary> Logs chat and related information (such as login/logout events) to plain text files for server administration purposes. </summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:Eco.Mods.ChatLog.ChatLogger.OnMessageSent(Eco.Gameplay.Systems.Messaging.Chat.ChatMessage)">
+            <summary>Formats an incoming <seealso cref="T:Eco.Gameplay.Systems.Messaging.Chat.ChatMessage"/> and logs it to its relevant log file.</summary>
+            <param name="msg"><see cref="T:Eco.Gameplay.Systems.Messaging.Chat.ChatMessage"/> instance to format and log.</param>
+        </member>
+        <member name="M:Eco.Mods.ChatLog.ChatLogger.LogLoginEvent(System.String)">
+            <summary>Logs a user's login event to the General channel log file and the Login events log file.</summary>
+            <param name="message">Login event message to process.</param>
+        </member>
+        <member name="M:Eco.Mods.ChatLog.ChatLogger.LogMessage(System.String,System.String,System.String)">
+            <summary>Logs a message to a specific NLog category to be written to file.</summary>
+            <param name="category">Category of the log message</param>
+            <param name="name">Name of the NLog logger used to log the message.</param>
+            <param name="message">Message to log with NLog.</param>
+        </member>
+        <member name="M:TreeEntity.TryDamageTrunk(Eco.Gameplay.GameActions.GameActionPack,Eco.Shared.Networking.INetObject,System.Single,Eco.Gameplay.Interactions.InteractionContext)">
+            <summary> Perform damaging healthy branches and trunk (if it's a fallen tree) </summary>
+        </member>
+    </members>
+</doc>
