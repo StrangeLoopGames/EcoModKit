@@ -12,4 +12,7 @@ Current examples:
 * [Flag](Examples/Flag) - A flag object with animation that can be turned of and off
 * [CornOnTheCob](Examples/CornOnTheCob) - A food mod which adds Corn on the cob as a new food.
 
+Community Mods:
+- [ImageWorldGenerator](CommunityMods/ImageWorldGenerator) - Modifys the world generation to be created from an image.
+
 If you have a suggestion for a new example mod you would like to see, or for some new functionality in the modkit for something you're trying to do, head over to [issues](https://github.com/StrangeLoopGames/EcoModKit/issues) and let us know!
