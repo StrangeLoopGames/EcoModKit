@@ -1,22 +1,12 @@
-namespace Eco
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Reflection;
-    using System.Threading.Tasks;
-    using Eco.Gameplay.Objects;
-    using Eco.Gameplay.Players;
-    using Eco.Gameplay.Systems.Chat;
-    using Eco.Mods.TechTree;
-    using Eco.Shared.Localization;
-    using Eco.Shared.Math;
-    using Eco.Shared.Networking;
-    using Eco.Shared.Services;
-    using Eco.Shared.Utils;
-    using Eco.World.Blocks;
+using Eco.Gameplay.Players;
+using Eco.Gameplay.Systems.Messaging.Chat;
+using Eco.Gameplay.Systems.Messaging.Chat.Commands;
+using Eco.Shared.Localization;
 
-    public class EchoCommand : IChatCommandHandler
+namespace EcoChat
+{
+    [ChatCommandHandler]
+    public class EchoCommand
     {
         /// <summary>
         /// Chat command for server administrators for repeating a message back to the sender
@@ -28,10 +18,10 @@ namespace Eco
         {
             if (message.Length == 0)
             {
-                ChatManager.ServerMessageToPlayer(Localizer.DoStr("Invalid usage. You must specify a message."), user);
+                ChatManager.SendMessage(user, user, Localizer.DoStr("Invalid usage. You must specify a message."));
                 return;
             }
-            ChatManager.ServerMessageToPlayer(Localizer.DoStr(message), user);
+            ChatManager.SendMessage(user, user, Localizer.DoStr(message));
         }
     }
 }
