@@ -1,62 +1,51 @@
-﻿namespace Eco.Mods.TechTree
+﻿using Eco.Gameplay.Components;
+using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Items;
+using Eco.Shared.Localization;
+using Eco.Gameplay.Objects;
+using Eco.Shared.Serialization;
+using Eco.Shared.Math;
+using Eco.Core.Items;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
+
+namespace Eco.Mods.TechTree
 {
-    using Eco.Gameplay.Components;
-    using Eco.Gameplay.Components.Auth;
-    using Eco.Gameplay.Items;
-    using Eco.Shared.Localization;
-    using Eco.Gameplay.Objects;
-    using Eco.Shared.Serialization;
-    using Eco.Shared.Math;
-    using System.Collections.Generic;
-    using Eco.Core.Items;
-    using Eco.Gameplay.Players;
-
-
     [Serialized]
-    [RequireComponent(typeof(SolidGroundComponent))]
-    [RequireComponent(typeof(RoomRequirementsComponent))]
+    [LocDisplayName("Test Flag")]
     [RequireComponent(typeof(OnOffComponent))]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    public partial class FlagObject : WorldObject
+    public partial class FlagObject : WorldObject, IRepresentsItem
     {
-        public override LocString DisplayName { get { return Localizer.DoStr("Test Flag"); } }
-        public bool isRoom { get; set; }
-        protected override void Initialize()
-        {
-          
-        }
+        public    virtual  Type RepresentedItemType => typeof(FlagItem);
 
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
+        // Runs on object placement/load before its first tick.
+        protected override void Initialize()        => base.Initialize();
+        protected override void PostInitialize()    => base.PostInitialize();
 
-        protected override void PostInitialize()
-        {
-            base.PostInitialize();
-        }
+        // Runs before the destruction of the object in world.
+        protected override void OnDestroy()         => base.OnDestroy();
 
     }
 
     [Serialized]
-    [LocDisplayName("Test Flag")]
-    [Ecopedia("Housing Objects", "Flags", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
+    [LocDisplayName("Test Flag")]  // Allows you to change the name the player sees for this item
+    [LocDescription("A piece of fabric with something on it. can be used for decorating.")] // The tooltip discription of the item.
+    [Ecopedia("Housing Objects", "Flags", createAsSubPage: true, DisplayOnPage = true)] // Creates a new subpage in Flags in the Housing Objects section for this item.
     [Weight(10)]
     public partial class FlagItem : WorldObjectItem<FlagObject>
     {
-        public override LocString DisplayDescription { get { return Localizer.DoStr("A piece of fabric with something on it. can be used for decorating."); } }
-
         static FlagItem()
         {
+            // Adds occupancy to the object in all the blocks listed in orentation of the root (front left bottom)
             WorldObject.AddOccupancy<FlagObject>(new List<BlockOccupancy>(){
-            new BlockOccupancy(new Vector3i(0, 0, 0)),
-            new BlockOccupancy(new Vector3i(0, 1, 0)),
+                new(new Vector3i(0, 0, 0)),
+                new(new Vector3i(0, 1, 0)),
             });
         }
     }
 
-    public partial class FlagRecipe :
-RecipeFamily
+    public partial class FlagRecipe : RecipeFamily
     {
         public FlagRecipe()
         {

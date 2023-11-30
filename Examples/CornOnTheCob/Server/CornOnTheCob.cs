@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Eco.Core.Items;
+﻿using Eco.Core.Items;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Players;
 using Eco.Gameplay.Skills;
 using Eco.Shared.Localization;
@@ -14,18 +10,18 @@ using Eco.Shared.Serialization;
 namespace Eco.Mods.TechTree
 {
     [Serialized]
-    [LocDisplayName("Corn on the cob")]
     [Weight(300)]
-    [Tag("BakedVegetable", 1)]
-    [Tag("BakedFood", 1)]
+    [Tag("BakedFood")]
+    [Tag("BakedVegetable")]
+    [LocDisplayName("Corn on the cob")]
+    [LocDescription("A warmly colored kernel studded vegetable.")]
     public partial class CornOnTheCobItem : FoodItem
     {
-        public override LocString DisplayNamePlural => Localizer.DoStr("Corn on the Cob ");
-        public override LocString DisplayDescription => Localizer.DoStr("A warmly colored kernel studded vegetable.");
-        public override Nutrients Nutrition => new Nutrients { Carbs = 12, Fat = 2, Protein = 3, Vitamins = 11};
+        public    override LocString DisplayNamePlural => Localizer.DoStr("Corn on the Cob ");
+        public    override Nutrients Nutrition         => new Nutrients { Carbs = 12, Fat = 2, Protein = 3, Vitamins = 11};
 
-        public override float Calories => 250;
-        public override int ShelfLife => 86000;
+        public    override float     Calories          => 250;
+        protected override float     BaseShelfLife     => 86000;
 
     }
 
