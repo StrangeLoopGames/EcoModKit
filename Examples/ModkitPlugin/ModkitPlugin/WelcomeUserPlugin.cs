@@ -12,7 +12,6 @@ using Eco.Core.Utils;
 using Eco.Gameplay.Players;
 using Eco.Shared.Localization;
 using Eco.Shared.Utils;
-using System.Threading.Tasks;
 
 namespace Eco.WelcomePlugin
 {
@@ -92,5 +91,7 @@ namespace Eco.WelcomePlugin
 
         /// <summary>Custom ToString override for properly naming our plugin into the Eco server UI</summary>
         public override string ToString() => "Welcome User";
+
+        string IServerPlugin.GetCategory() => "Mods";
     }
 }

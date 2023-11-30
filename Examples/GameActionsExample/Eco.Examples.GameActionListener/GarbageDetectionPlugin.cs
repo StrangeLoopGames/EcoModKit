@@ -1,14 +1,10 @@
-﻿/*
- * 
- * 
- */
-
-using Eco.Core.Plugins.Interfaces;
+﻿using Eco.Core.Plugins.Interfaces;
 using Eco.Core.Utils;
+using Eco.Gameplay.Aliases;
 using Eco.Gameplay.GameActions;
+using Eco.Gameplay.Property;
 using Eco.Gameplay.Systems.Messaging.Notifications;
 using Eco.Shared.Localization;
-using System.Threading.Tasks;
 
 namespace Eco.Examples.GameActionListener
 {
@@ -20,7 +16,8 @@ namespace Eco.Examples.GameActionListener
     public class GarbageDetectionPlugin : IModKitPlugin, IGameActionAware, IInitializablePlugin, IShutdownablePlugin
     {
         /// <summary>Retrieves the current status of the <see cref="IModKitPlugin"/>.</summary>
-        public string GetStatus() => "Ready!";
+        public string GetStatus()   => "Ready!";
+        public string GetCategory() => "Mods";
 
         #region IInitializablePlugin/IShutdownablePlugin Interface
         /// <summary>Called on plugin instantiation to register our selves with the <see cref="ActionUtil"/> listeners.</summary>
@@ -60,6 +57,16 @@ namespace Eco.Examples.GameActionListener
         /// <param name="action">The <see cref="GameAction"/> being performed. This variable can be compared against the interfaces and defined action models to find out what is being processed.</param>
         /// <returns>The <see cref="LazyResult"/> containing the modified authorization result.</returns>
         public LazyResult ShouldOverrideAuth(GameAction action) => LazyResult.Succeeded; // Don't change the authorization behaviour of this action
+
+        void IGameActionAware.ActionPerformed(GameAction action)
+        {
+            throw new NotImplementedException();
+        }
+
+        LazyResult ICanOverrideAuth.ShouldOverrideAuth(IAlias? alias, IOwned? property, GameAction? action)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }
